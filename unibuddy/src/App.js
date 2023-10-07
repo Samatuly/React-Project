@@ -1,11 +1,18 @@
-import logo from './logo.svg';
+import React, {Component} from 'react';
+import Sidebar from './Sidebar/Sidebar';
 import './App.css';
+import Schedule from './Schedule/Schedule';
+import Timetable from './Timetable/Timetable';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>My Timetable</h1>
-      <Timetable />
+const App = () => {
+  return(
+    <div className='app-wrapper'>
+      <div>
+        <Sidebar/>
+      </div>
+      <div>
+        <Schedule/>
+      </div>
     </div>
   );
 }

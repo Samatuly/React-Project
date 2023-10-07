@@ -1,3 +1,7 @@
+@import './Sidebar/Sidebar.module.css';
+@import './Schedule/Schedule.module.css';
+@import './Timetable/Timetable.css';
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.app-wrapper{
+  display: grid;
+
+  grid-template-areas: 
+  "Sidebar Timetable Sidebar";
+
+  grid-template-columns: 2fr 5fr 2fr;
 }
