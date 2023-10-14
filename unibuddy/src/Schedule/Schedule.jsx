@@ -7,7 +7,7 @@ for(let i = 8; i <= 22; i++){
 }
 const Days = ['', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
-const Schedule = () => {
+const Schedule = (props) => {
     return (
         <div className="schedule">
             <div className="days">

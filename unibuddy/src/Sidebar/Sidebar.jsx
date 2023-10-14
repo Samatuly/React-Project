@@ -4,18 +4,18 @@ import s from './Sidebar.module.css';
 const Sidebar = () => {
     return(
     <nav className="sidebar">
-        <div className="sidebar-list">
-            <div>
-                Profile
+        <div className="sidebar-menu">
+            <div className="sidebar-icon">
+                <a href="/profile">Profile</a>
             </div>
-            <div>
-                Organisation
+            <div className="sidebar-icon">
+                <a href="/organisation">Organisation</a>
             </div>
-            <div>
-                Schedule
+            <div className="sidebar-icon">
+                <a href="/schedule">Schedule</a>
             </div>
-            <div>
-                E-Library
+            <div className="sidebar-icon">
+                <a href="/e_library">E-Library</a>
             </div>
         </div>
     </nav>

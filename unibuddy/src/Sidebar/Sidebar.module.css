@@ -5,6 +5,11 @@
 }
 
 .sidebar-list {
+    margin-top: 50px;
+}
+
+.sidebar-icon {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 18px;
-}   
+    margin-bottom: 20px;
+}

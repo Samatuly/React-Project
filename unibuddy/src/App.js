@@ -1,19 +1,32 @@
-import React, {Component} from 'react';
+import React from 'react';
+import {Routes, Route, BrowserRouter } from 'react-router-dom';
 import Sidebar from './Sidebar/Sidebar';
-import './App.css';
 import Schedule from './Schedule/Schedule';
-import Timetable from './Timetable/Timetable';
+import Profile from './Profile/Profile.jsx';
+import Organisation from './Organisation/Organisation.jsx';
+import E_Library from './E-Library/E-Library';
+import './App.css';
+import BookDetail from './E-Library/BookDetail';
 
 const App = () => {
   return(
-    <div className='app-wrapper'>
-      <div>
-        <Sidebar/>
+    <BrowserRouter>
+      <div className='app-wrapper'>
+        <div className='app-sidebar'>
+          <Sidebar/>
+        </div>
+        <div>
+          <Routes>
+            {/* <Route path='/' element={<Home/>}/> */}
+            <Route path='/profile' element={<Profile/>} />
+            <Route path='/organisation' element={<Organisation/>} />
+            <Route path='/schedule' element={<Schedule/>} />
+            <Route exact path='/e_library' element={<E_Library/>} />
+            <Route path='/e_library/:id' element={<BookDetail/>} />
+          </Routes>
+        </div>
       </div>
-      <div>
-        <Schedule/>
-      </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
