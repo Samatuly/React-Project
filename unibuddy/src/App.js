@@ -7,6 +7,8 @@ import Organisation from './Organisation/Organisation.jsx';
 import E_Library from './E-Library/E-Library';
 import './App.css';
 import BookDetail from './E-Library/BookDetail';
+import Login from './Login/Login';
+import Register from './Login/Register';
 
 const App = () => {
   return(
@@ -23,6 +25,8 @@ const App = () => {
             <Route path='/schedule' element={<Schedule/>} />
             <Route exact path='/e_library' element={<E_Library/>} />
             <Route path='/e_library/:id' element={<BookDetail/>} />
+            <Route path='/login' element={<Login/>} />
+            <Route path='/register' element={<Register/>} />
           </Routes>
         </div>
       </div>

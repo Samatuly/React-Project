@@ -17,6 +17,9 @@ const Sidebar = () => {
             <div className="sidebar-icon">
                 <a href="/e_library">E-Library</a>
             </div>
+            <div className="sidebar-icon">
+                <a href="/login">Login</a>
+            </div>
         </div>
     </nav>
     );
