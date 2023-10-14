@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3b6097b9-9cba-4ff7-bb53-d25503c58abb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../hh_back/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_back/.idea/hh_back.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_back/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_back/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_back/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_back/api/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_back/api/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_back/api/cbv.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_back/api/fbv.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_back/api/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_back/api/migrations/0002_rename_price_vacancy_salary.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_back/api/migrations/0003_rename_salary_vacancy_price.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_back/api/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_back/api/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_back/api/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_back/api/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_back/api/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_back/api/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_back/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_back/main/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_back/main/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_back/main/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_back/main/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_back/main/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_back/main/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_back/main/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_back/main/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_front/src/app/company.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hh_front/src/app/vacancy.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kbtu/src/app/app-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kbtu/src/app/app.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kbtu/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kbtu/src/app/app.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kbtu/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kbtu/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kbtu/src/assets/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kbtu/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kbtu/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kbtu/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kbtu/src/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../org/src/app/ideas/ideas.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../org/src/app/ideas/ideas.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../org/src/app/ideas/ideas.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../org/src/app/ideas/ideas.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project/src/app/account/account.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project/src/app/account/account.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project/src/app/account/account.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project/src/app/account/account.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project/src/app/login-page/login-page.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project/src/app/login-page/login-page.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project/src/app/login-page/login-page.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project/src/app/login-page/login-page.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project/src/app/top-bar/top-bar.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project/src/app/top-bar/top-bar.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project/src/app/top-bar/top-bar.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project/src/app/top-bar/top-bar.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Canteen/Canteen.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Canteen/Menu/Categories.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Canteen/Menu/Food.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Canteen/Menu/Menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Canteen/Menu/data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Canteen/Menu/menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Canteen/canteen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Home/Data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Home/Home.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Home/RightBar/RightBar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Home/RightBar/rightbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Home/Share/Share.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Home/Share/share.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Home/Slider/Slider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Home/Slider/slider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Home/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Home/news/News.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Home/news/news.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Home/news/sidebarLeft.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Profile/Information.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Profile/profile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ratings/Ratings.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ratings/RatingsData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ratings/ratings.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Sidebar/Sidebar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Sidebar/SidebarData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Sidebar/sidebar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Topbar/Topbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Topbar/topbar.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2VYcaBSumFqDWBrIUxJBz8xrQPl" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ayazhanbaltabayeva/Desktop/Web-Dev/uni_buddy&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/ayazhanbaltabayeva/Desktop/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Ratings" />
+      <recent name="$PROJECT_DIR$/src/Home" />
+      <recent name="$PROJECT_DIR$/src/Sidebar" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3b6097b9-9cba-4ff7-bb53-d25503c58abb" name="Changes" comment="" />
+      <created>1695016514101</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695016514101</updated>
+      <workItem from="1695016516127" duration="14000" />
+      <workItem from="1695316459710" duration="708000" />
+      <workItem from="1696061236705" duration="2379000" />
+      <workItem from="1696772991699" duration="626000" />
+      <workItem from="1696773649968" duration="10466000" />
+      <workItem from="1696847435084" duration="554000" />
+      <workItem from="1697183702581" duration="276000" />
+      <workItem from="1697183982199" duration="5884000" />
+      <workItem from="1697189886661" duration="17190000" />
+      <workItem from="1697269798452" duration="2203000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/Topbar/Topbar.js" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="javascript-exception" />
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
