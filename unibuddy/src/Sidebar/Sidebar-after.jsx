@@ -1,7 +1,7 @@
 import React from "react";
 import s from './Sidebar.module.css';
 
-const Sidebar = () => {
+const Sidebar_after = () => {
     return(
     <nav className="sidebar">
         <div className="sidebar-menu">
@@ -18,11 +18,11 @@ const Sidebar = () => {
                 <a href="/e_library">E-Library</a>
             </div>
             <div className="sidebar-icon">
-                <a href="/login">Login</a>
+                <a href="/">Sign Out</a>
             </div>
         </div>
     </nav>
     );
 }
 
-export default Sidebar;
+export default Sidebar_after;

@@ -39,4 +39,10 @@
     text-decoration: none;
     color: #007bff;
   }
+
+  .error {
+    margin-bottom: 5px;
+    color: #ff0000;
+    font-weight: bold;
+  }
   
