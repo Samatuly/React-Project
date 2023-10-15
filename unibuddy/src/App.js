@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Routes, Route, BrowserRouter } from 'react-router-dom';
 import Sidebar_before from './Sidebar/Sidebar-before';
 import Sidebar_after from './Sidebar/Sidebar-after';
@@ -13,11 +13,13 @@ import Register from './Login/Register';
 import AuthDetails from './Login/AuthDetails';
 
 const App = () => {
+  const [isSignedIn, setIsSignedIn] = useState(false);
+
   return(
     <BrowserRouter>
       <div className='app-wrapper'>
         <div className='app-sidebar'>
-          <Sidebar_before/>
+          {isSignedIn ? <Sidebar_after /> : <Sidebar_before />}
         </div>
         <div>
           <Routes>
@@ -27,7 +29,7 @@ const App = () => {
             <Route path='/schedule' element={<Schedule/>} />
             <Route exact path='/e_library' element={<E_Library/>} />
             <Route path='/e_library/:id' element={<BookDetail/>} />
-            <Route path='/login' element={<Login/>} />
+            <Route path='/login' element={<Login onSignIn={() => setIsSignedIn(true)} />} />
             <Route path='/register' element={<Register/>} />
             <Route path='/authdetails' element={<AuthDetails/>} />
           </Routes>

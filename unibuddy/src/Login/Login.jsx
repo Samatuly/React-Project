@@ -5,7 +5,7 @@ import { auth } from '../Firebase/Firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import Profile from "../Profile/Profile";
 
-const Login = () => {
+const Login = (props) => {
   const history = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,6 +15,7 @@ const Login = () => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
     .then(() => {
+      props.onSignIn();
       history('/profile');
     }).catch((error) => {
       setError("Invalid email or password. Please try again");
