@@ -27,14 +27,13 @@ const App = () => {
         </div>
         <div>
           <Routes>
-            {/* <Route path='/' element={<Home/>}/> */}
             <Route path='/profile' element={<Profile/>} />
-            <Route path='/organisation' element={<Organisation onSignIn={() => setIsSignedIn(true)}/>} />
-            <Route path='/schedule' element={<Schedule onSignIn={() => setIsSignedIn(true)}/>} />
-            <Route exact path='/e_library' element={<E_Library onSignIn={() => setIsSignedIn(true)}/>} />
-            <Route path='/e_library/:id' element={<BookDetail onSignIn={() => setIsSignedIn(true)}/>} />
+            <Route path='/organisation' element={<Organisation/>} />
+            <Route path='/schedule' element={<Schedule/>} />
+            <Route path='/e_library' element={<E_Library/>} />
+            <Route path='/e_library/:id' element={<BookDetail/>} />
             <Route path='/login' element={<Login onSignIn={() => setIsSignedIn(true)} />} />
-            <Route path='/logout' element={<Logout/>} />
+            <Route path='/logout' element={<Logout onSignOut={() => setIsSignedIn(false)}/>} />
             <Route path='/register' element={<Register />} />
             <Route path='/authdetails' element={<AuthDetails/>} />
           </Routes>
