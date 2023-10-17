@@ -1,7 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
+import { Link, Route, Routes, useNavigate } from "react-router-dom";
+import { auth } from '../Firebase/Firebase';
+import { signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import s from './Sidebar.module.css';
 
 const Sidebar_after = () => {
+
     return(
     <nav className="sidebar">
         <div className="sidebar-menu">
@@ -18,7 +22,7 @@ const Sidebar_after = () => {
                 <a href="/e_library">E-Library</a>
             </div>
             <div className="sidebar-icon">
-                <a href="/">Sign Out</a>
+                <a href="/logout">Sign Out</a>
             </div>
         </div>
     </nav>

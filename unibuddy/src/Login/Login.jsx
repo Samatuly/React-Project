@@ -1,9 +1,11 @@
-import React, { useState } from "react";
-import { Link, Route, Routes, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import './Login.css'
 import { auth } from '../Firebase/Firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import Profile from "../Profile/Profile";
+import App from "../App";
+import Register from "./Register";
 
 const Login = (props) => {
   const history = useNavigate();
@@ -17,7 +19,7 @@ const Login = (props) => {
     .then(() => {
       props.onSignIn();
       history('/profile');
-    }).catch((error) => {
+    }).catch(() => {
       setError("Invalid email or password. Please try again");
     })
   };
