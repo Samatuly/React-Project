@@ -1,0 +1,16 @@
+@import './Sidebar/Sidebar.module.css';
+@import './Schedule/Schedule.module.css';
+
+.app-wrapper{
+  display: grid;
+
+  grid-template-areas: 
+  "Sidebar Timetable Sidebar";
+
+  grid-template-columns: 2fr 5fr 2fr;
+}
+
+.app-sidebar{
+  background-color: #beba51;
+  
+}
