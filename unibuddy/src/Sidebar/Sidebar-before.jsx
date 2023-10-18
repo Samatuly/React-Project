@@ -1,16 +1,23 @@
 import React from "react";
-import s from './Sidebar.module.css';
+import './sidebar.css';
+import {SidebarData} from "./SidebarData"
 
-const Sidebar_before = () => {
+function Sidebar(){
     return(
-    <nav className="sidebar">
-        <div className="sidebar-menu">
-            <div className="sidebar-icon">
-                <a href="/login">Sign In</a>
-            </div>
+        <div className="sidebar">
+            <ul className="sidebarList">
+                {SidebarData.map((val, key) => {
+                    return <li className="row"
+                               id={window.location.pathname == val.link ? "active" : ""}
+                               key = {key} onClick={() => {window.location.pathname = val.link}}>
+                        <div className="sidebar-icon">{val.icon}</div>
+                        {" "}
+                        <div>{val.title}</div>
+                    </li>;
+                })}
+            </ul>
         </div>
-    </nav>
-    );
+    )
 }
 
-export default Sidebar_before;
+export default Sidebar;

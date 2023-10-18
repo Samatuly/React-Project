@@ -7,7 +7,7 @@ import Profile from "../Profile/Profile";
 import App from "../App";
 import Register from "./Register";
 
-const Login = (props) => {
+const SignIn = (props) => {
   const history = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,7 +18,7 @@ const Login = (props) => {
     signInWithEmailAndPassword(auth, email, password)
     .then(() => {
       props.onSignIn();
-      history('/profile');
+      history('/home');
     }).catch(() => {
       setError("Invalid email or password. Please try again");
     })
@@ -51,4 +51,4 @@ const Login = (props) => {
   );
 }
 
-export default Login;
+export default SignIn;

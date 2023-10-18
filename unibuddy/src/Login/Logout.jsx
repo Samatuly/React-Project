@@ -7,7 +7,7 @@ const SignOut = (props) => {
     const history = useNavigate();
     signOut(auth).then(() => {
       props.onSignOut();
-      history('/login');
+      history('/signin');
     }).catch((error) => console.log(error));
 }
 

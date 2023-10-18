@@ -1,32 +1,23 @@
-import React, {useState} from "react";
-import { Link, Route, Routes, useNavigate } from "react-router-dom";
-import { auth } from '../Firebase/Firebase';
-import { signInWithEmailAndPassword, signOut } from 'firebase/auth';
-import s from './Sidebar.module.css';
+import React from "react";
+import './sidebar.css';
+import {SidebarData} from "./SidebarData"
 
-const Sidebar_after = () => {
-
+function Sidebar(){
     return(
-    <nav className="sidebar">
-        <div className="sidebar-menu">
-            <div className="sidebar-icon">
-                <a href="/profile">Profile</a>
-            </div>
-            <div className="sidebar-icon">
-                <a href="/organisation">Organisation</a>
-            </div>
-            <div className="sidebar-icon">
-                <a href="/schedule">Schedule</a>
-            </div>
-            <div className="sidebar-icon">
-                <a href="/e_library">E-Library</a>
-            </div>
-            <div className="sidebar-icon">
-                <a href="/logout">Sign Out</a>
-            </div>
+        <div className="sidebar">
+            <ul className="sidebarList">
+                {SidebarData.map((val, key) => {
+                    return <li className="row"
+                               id={window.location.pathname == val.link ? "active" : ""}
+                               key = {key} onClick={() => {window.location.pathname = val.link}}>
+                        <div className="sidebar-icon">{val.icon}</div>
+                        {" "}
+                        <div>{val.title}</div>
+                    </li>;
+                })}
+            </ul>
         </div>
-    </nav>
-    );
+    )
 }
 
-export default Sidebar_after;
+export default Sidebar;

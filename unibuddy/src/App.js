@@ -12,6 +12,8 @@ import Login from './Login/Login';
 import Register from './Login/Register';
 import AuthDetails from './Login/AuthDetails';
 import Logout from './Login/Logout';
+import SignIn from './Login/Login';
+import SignOut from './Login/Logout';
 
 const App = () => {
     const [isSignedIn, setIsSignedIn] = useState(localStorage.getItem('isSignedIn') === 'true');
@@ -27,15 +29,17 @@ const App = () => {
         </div>
         <div>
           <Routes>
+            {/* <Route path="/home" element={<Home />}></Route>
+            <Route path="/canteen" element={<Canteen />}></Route>
+            <Route path="/ratings" element={<Ratings />}></Route> */}
             <Route path='/profile' element={<Profile/>} />
             <Route path='/organisation' element={<Organisation/>} />
             <Route path='/schedule' element={<Schedule/>} />
             <Route path='/e_library' element={<E_Library/>} />
             <Route path='/e_library/:id' element={<BookDetail/>} />
-            <Route path='/login' element={<Login onSignIn={() => setIsSignedIn(true)} />} />
-            <Route path='/logout' element={<Logout onSignOut={() => setIsSignedIn(false)}/>} />
+            <Route path='/signin' element={<SignIn onSignIn={() => setIsSignedIn(true)} />} />
+            <Route path='/signout' element={<SignOut onSignOut={() => setIsSignedIn(false)}/>} />
             <Route path='/register' element={<Register />} />
-            <Route path='/authdetails' element={<AuthDetails/>} />
           </Routes>
         </div>
       </div>

@@ -16,7 +16,7 @@ function Register() {
     if(password == confirmPassword){
       createUserWithEmailAndPassword(auth, email, password)
       .then(() => {
-        history('/login');
+        history('/signin');
       })
       .catch((error) => {
         console.log(error);
