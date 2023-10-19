@@ -3,6 +3,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 20px;
+    display: flex;
+    width: 75%;
+    margin-left: 25%;
   }
   
   .book {

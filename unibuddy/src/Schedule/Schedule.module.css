@@ -1,6 +1,7 @@
 .schedule{
-    display: grid;
-    grid-template-rows: 2fr 15fr;
+    display: flex;
+    width: 75%;
+    margin-left: 25%;
 }
 
 .days { 

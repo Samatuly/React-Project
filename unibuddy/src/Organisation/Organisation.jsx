@@ -4,7 +4,7 @@ import  './Organisation.css';
 const Organisation = (props) => {
 
     return (
-        <div>
+        <div className="container">
             Organisation
         </div>
     );
