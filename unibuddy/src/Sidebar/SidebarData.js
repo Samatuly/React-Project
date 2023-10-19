@@ -14,14 +14,14 @@ export const SidebarData = [
         link:"/schedule"
     },
     {
-        title:"Organizations",
+        title:"Organisations",
         icon:<Group/>,
-        link:"/organizations"
+        link:"/organisation"
     },
     {
         title:"Library",
         icon:<LibraryAdd/>,
-        link:"/library"
+        link:"/e_library"
     },
     {
         title:"Events",

@@ -1,12 +1,12 @@
 import React from "react";
 import './sidebar.css';
-import {SidebarData} from "./SidebarData"
+import {SidebarData_before} from "./SidebarData_before"
 
 function Sidebar(){
     return(
         <div className="sidebar">
             <ul className="sidebarList">
-                {SidebarData.map((val, key) => {
+                {SidebarData_before.map((val, key) => {
                     return <li className="row"
                                id={window.location.pathname == val.link ? "active" : ""}
                                key = {key} onClick={() => {window.location.pathname = val.link}}>

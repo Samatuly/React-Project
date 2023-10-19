@@ -1,0 +1,39 @@
+.canteen{
+    display: flex;
+    width: 75%;
+    margin-left: 25%;
+}
+.canteen-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+.canteen-left{
+    flex:4;
+    width: 50%;
+}
+.canteen-right{
+    width: 50%;
+    height:max-content ;
+    flex: 3;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 16px -8px rgba(0,0,0,0.68);
+    box-shadow: 0 0 16px -8px  rgba(0,0,0,0.68);
+    margin: 10px;
+}
+.canteen-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.canteen-text{
+    font-size: 15px;
+    font-weight: bold;
+}
+.canteen-image-2{
+    width: 400px;
+    height: 350px;
+    object-fit: cover;
+    margin-right: 10px;
+}

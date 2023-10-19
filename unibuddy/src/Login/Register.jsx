@@ -28,9 +28,9 @@ function Register() {
   };
 
   return (
-    <div className="auth-container">
+    <div className="auth-container register">
       <h2>Register</h2>
-      <form onSubmit={Register}>
+      <form onSubmit={Register} className="login_form">
         <input
           type="text"
           placeholder="Username"
@@ -51,7 +51,7 @@ function Register() {
         />
         <button onClick={Register}>Register</button>
         {error && <div className="error">{error}</div>}
-        <Link to="/login" className="link">Already have an account? Login here.</Link>
+        <Link to="/signin" className="link">Already have an account? Login here.</Link>
       </form>
     </div>
   );

@@ -28,7 +28,7 @@ const SignIn = (props) => {
     <div className="auth-container">
         <img src='https://t3.ftcdn.net/jpg/05/24/35/54/360_F_524355469_Az3J86DbP9jC4hWovxp0XGo0MwjXaKXK.jpg' alt="Login" width='80%' />
         <h2>Login</h2>
-        <form onSubmit={login}>
+        <form onSubmit={login} className="login_form">
           <input
           type="text"
           placeholder="Username"
