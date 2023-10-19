@@ -11,6 +11,7 @@ function RightBar(){
                         <div className="organization-top">
                             <span className="organizations-text">Organizations</span>
                         </div>
+      
                         <ul className="organizations-list">
                             <li>                <img src="https://i.pinimg.com/736x/2d/1c/1d/2d1c1d5bd5930c5f886b9a5e6ab299a4.jpg" className="organizations-img"></img>
                                 Faces</li>

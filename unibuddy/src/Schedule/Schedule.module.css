@@ -1,0 +1,31 @@
+.schedule{
+    display: flex;
+    width: 75%;
+    margin-left: 25%;
+}
+
+.days { 
+    display: grid;
+    grid-template-columns: 2fr repeat(6, 3fr);
+}
+
+.day {
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+
+.hours {
+    display: grid;
+    grid-template-rows: repeat(15, 40px);
+    flex-direction: column;
+    text-align: center;
+}
+
+.hour {
+    display: grid;
+    grid-template-columns: 2fr repeat(6, 3fr);
+    border: 1px solid #ccc;
+
+}

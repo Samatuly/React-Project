@@ -18,6 +18,19 @@ function News(){
                                         <button className="news-button"><EmojiEmotions className="news-icon"/></button>
                         </div>
                         <button className="news-button"><Telegram/></button>
+      
+//                         <Person/>
+//                         <input placeholder="What's in your mind? " className="news-input"/>
+//                     </div>
+//                     <hr className="news-hr"/>
+//                     <div className="news-bottom">
+//                         <div className="news-options">
+//                             <PermMedia className="news-icon"/>
+//                             <Label className="news-icon"/>
+//                             <Room className="news-icon"/>
+//                             <EmojiEmotions className="news-icon"/>
+//                         </div>
+//                         <button className="news-button"><Telegram/>Share</button>
                     </div>
                 </div>
             </div>

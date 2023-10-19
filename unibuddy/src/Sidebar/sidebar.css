@@ -42,4 +42,8 @@
 }
 .sidebarList #active {
     background-color: #1c1c1c;
+    background-color: #E1E8ED;
+}
+.sidebarList #active {
+    background-color: #E1E8ED;
 }

@@ -16,6 +16,7 @@ function Canteen(){
                         <div className="canteen-container">
                             <div className="canteen-top">
                                 <span className="canteen-text">Menu for today!</span>
+
                             </div>
                             <hr/>
                             <div className="canteen-menu">
@@ -30,6 +31,12 @@ function Canteen(){
                                     <p className="menu-price">250 тг</p>
                             </div>
                         </div>
+
+                                <ZoomOutMap/>
+                            </div>
+                            <hr/>
+                            <img className="canteen-image-2" src="https://marketplace.canva.com/EAFN8syLrEw/1/0/900w/canva-gray-and-brown-minimalist-schedule-today-instagram-story-oJoSA9xf8NI.jpg"></img></div>
+
                     </div>
                 </div>
             </div>

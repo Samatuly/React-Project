@@ -1,5 +1,6 @@
 import React from "react";
 import {Event, Group, Home, LibraryAdd, RestaurantMenu, Schedule, Settings, StarPurple500} from "@mui/icons-material";
+
 import {Menu} from "@mui/material";
 
 export const SidebarData = [
@@ -42,5 +43,10 @@ export const SidebarData = [
         title:"Settings",
         icon:<Settings/>,
         link:"/settings"
+    },
+    {
+        title:"Sign Out",
+        icon:<Output/>,
+        link:"/signout"
     },
 ]

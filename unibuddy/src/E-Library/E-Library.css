@@ -1,0 +1,35 @@
+.library {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+    display: flex;
+    width: 75%;
+    margin-left: 25%;
+  }
+  
+  .book {
+    width: calc(20%); /* 6 books per row with spacing */
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  .book img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Additional styling for book titles, authors, and published years */
+  .book h2 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  .book p {
+    font-size: 1rem;
+    color: #777;
+  }
+  
