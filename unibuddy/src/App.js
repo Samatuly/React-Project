@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Home from "./Home/Home";
+import Canteen from "./Canteen/Canteen";
+import Topbar from "./Topbar/Topbar"
+import {Route, Routes} from "react-router-dom";
+import React from "react";
+import Sidebar from "./Sidebar/Sidebar";
+import Ratings from "./Ratings/Ratings";
+import Faculty from "./Ratings/Faculty";
+import Professors from "./Ratings/Professors";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React 2
-        </a>
-      </header>
-    </div>
+    <>
+        <Topbar/>
+        <Sidebar/>
+        <Routes>
+            <Route path="/home" element={<Home />}></Route>
+            <Route path="/canteen" element={<Canteen />}></Route>
+            <Route path="/ratings" element={<Faculty />}></Route>
+            <Route path="/professors" element={<Professors/>}></Route>
+        </Routes>
+    </>
   );
 }
-
 export default App;

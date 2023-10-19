@@ -1,0 +1,29 @@
+.sidebarLeft{
+    height: 20vw;
+    background-color:#F5F8FA;
+    width: 25%;
+    border-radius:15%;
+    margin-top: 20px;
+    position: fixed;
+    margin-bottom: 15px;
+    right: 5%;
+}
+.sidebarLeft h3{
+    text-align: center;
+}
+.sidebarLeftList{
+    height: auto;
+    padding: 0;
+}
+.sidebarLeftList .rowLeft{
+    height: 50px;
+    list-style-type: none;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+    color: grey;
+    font-family: 'Trebuchet MS','Lucida Grande',Arial,sans-serif;
+}
+.sidebarLeftList .rowLeft:hover {
+    cursor: pointer;
+}
