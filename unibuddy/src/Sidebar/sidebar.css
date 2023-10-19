@@ -1,16 +1,23 @@
 .sidebar{
     height: calc(100vh - 50px);
     width: 23%;
-    background-color:#F5F8FA;
     position: fixed;
+    border-right: 2px solid #494949;
 }
 .sidebar h1{
     padding: 15px;
     text-align: center;
-    color:#657786;
+    color:white;
 }
 .sidebar-icon{
     margin-right: 10px;
+    background-color: transparent;
+    color: white;
+}
+.sidebar-title{
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
 }
 .sidebarList{
     height: auto;
@@ -31,6 +38,10 @@
 }
 .sidebarList .row:hover{
     cursor: pointer;
+    background-color: #1c1c1c;
+}
+.sidebarList #active {
+    background-color: #1c1c1c;
     background-color: #E1E8ED;
 }
 .sidebarList #active {

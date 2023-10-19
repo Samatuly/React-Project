@@ -1,5 +1,6 @@
 import React from "react";
-import {Event, Group, Home, Input, LibraryAdd, Logout, Output, RestaurantMenu, Schedule, Settings, StarPurple500} from "@mui/icons-material";
+import {Event, Group, Home, LibraryAdd, RestaurantMenu, Schedule, Settings, StarPurple500} from "@mui/icons-material";
+
 import {Menu} from "@mui/material";
 
 export const SidebarData = [
@@ -14,14 +15,14 @@ export const SidebarData = [
         link:"/schedule"
     },
     {
-        title:"Organisations",
+        title:"Organizations",
         icon:<Group/>,
-        link:"/organisation"
+        link:"/organizations"
     },
     {
         title:"Library",
         icon:<LibraryAdd/>,
-        link:"/e_library"
+        link:"/library"
     },
     {
         title:"Events",

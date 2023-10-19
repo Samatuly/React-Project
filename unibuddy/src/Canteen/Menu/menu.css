@@ -23,6 +23,9 @@
 .title{
     text-align: center;
 }
+.menu-title{
+    margin-top: 10px;
+}
 .categories-container{
     display: flex;
     justify-content: center;

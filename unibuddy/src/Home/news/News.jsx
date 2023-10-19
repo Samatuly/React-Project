@@ -8,18 +8,29 @@ function News(){
             <div className="news-container">
                 <div className="news-wrapper">
                     <div className="news-top">
-                        <Person/>
-                        <input placeholder="What's in your mind? " className="news-input"/>
+                        <h1>HomePage</h1>
                     </div>
-                    <hr className="news-hr"/>
                     <div className="news-bottom">
                         <div className="news-options">
-                            <PermMedia className="news-icon"/>
-                            <Label className="news-icon"/>
-                            <Room className="news-icon"/>
-                            <EmojiEmotions className="news-icon"/>
+                            <button className="news-button"><PermMedia className="news-icon"/></button>
+                                <button className="news-button"><Label className="news-icon"/></button>
+                                    <button className="news-button"><Room className="news-icon"/></button>
+                                        <button className="news-button"><EmojiEmotions className="news-icon"/></button>
                         </div>
-                        <button className="news-button"><Telegram/>Share</button>
+                        <button className="news-button"><Telegram/></button>
+      
+//                         <Person/>
+//                         <input placeholder="What's in your mind? " className="news-input"/>
+//                     </div>
+//                     <hr className="news-hr"/>
+//                     <div className="news-bottom">
+//                         <div className="news-options">
+//                             <PermMedia className="news-icon"/>
+//                             <Label className="news-icon"/>
+//                             <Room className="news-icon"/>
+//                             <EmojiEmotions className="news-icon"/>
+//                         </div>
+//                         <button className="news-button"><Telegram/>Share</button>
                     </div>
                 </div>
             </div>
