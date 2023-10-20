@@ -1,0 +1,9 @@
+.imgMan{
+    border-radius: 100%;
+    width: 25%;
+}
+.ProfileInfo label{
+    font-size: 35px;
+    display: flex;
+    flex-direction: row;
+}
