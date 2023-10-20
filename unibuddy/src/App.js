@@ -40,6 +40,7 @@ import Canteen from "./Canteen/Canteen";
 import Ratings from "./Ratings/Ratings";
 import Topbar from "./Topbar/Topbar";
 import "./App.css";
+import Faculty from "./Ratings/Faculty";
 
 const App = () => {
   const [isSignedIn, setIsSignedIn] = useState(
@@ -58,7 +59,7 @@ const App = () => {
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/canteen" element={<Canteen />} />
-          <Route path="/ratings" element={<Ratings />} />
+          <Route path="/ratings" element={<Faculty />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/organisation" element={<Organisation />} />
           <Route path="/schedule" element={<Schedule />} />
