@@ -1,10 +1,28 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import { collection, getDocs } from 'firebase/firestore';
+import { db, firestore } from "../../Firebase/Firebase";
 
-const Food = ({ items }) => {
+const Food = () => {
+    const [menu, setMenu] = useState([]);
+
+    useEffect(() => {
+      const fetchMenu = async () => {
+        const menuCollection = collection(firestore, 'menu');
+        const menuSnapshot = await getDocs(menuCollection);
+        const menuData = menuSnapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data()
+        }));
+        setMenu(menuData);
+      };
+  
+      fetchMenu();
+    }, []);
+
     return (
         <div className="section-center">
-            {items.map((item) => {
-                const { id, title, img, desc, price } = item;
+            {menu.map((menu) => {
+                const { id, title, img, desc, price } = menu;
                 return (
                     <article key={id} className="menu-item">
                         <img src={img} alt={title} className="menu-photo" />
