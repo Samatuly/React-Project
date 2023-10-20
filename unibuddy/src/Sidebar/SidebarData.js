@@ -32,7 +32,7 @@ export const SidebarData = [
   {
     title: "Library",
     icon: <LibraryAdd />,
-    link: "/library",
+    link: "/e_library",
   },
   {
     title: "Events",

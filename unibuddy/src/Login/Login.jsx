@@ -3,6 +3,7 @@ import { Link, Route, Routes, useLocation, useNavigate } from "react-router-dom"
 import './Login.css'
 import { auth } from '../Firebase/Firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
+import loginPhoto from '../Login/Login_page_photo.jpg';
 import Profile from "../Profile/Profile";
 import App from "../App";
 import Register from "./Register";
@@ -26,7 +27,7 @@ const SignIn = (props) => {
 
   return (
     <div className="auth-container">
-        <img src='https://t3.ftcdn.net/jpg/05/24/35/54/360_F_524355469_Az3J86DbP9jC4hWovxp0XGo0MwjXaKXK.jpg' alt="Login" width='80%' />
+        <img src={loginPhoto} alt="Login" width='60%'/>
         <h2>Login</h2>
         <form onSubmit={login} className="login_form">
           <input
