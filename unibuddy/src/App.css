@@ -1,7 +1,8 @@
-*{
+* {
   margin: 0;
   padding: 0;
-  background-color: #141414;
+  background-color: hsl(0, 0%, 100%);
+  color: black;
 }
 .App {
   width: 100vw;
