@@ -13,7 +13,7 @@ function Register() {
 
   const Register = (e) => {
     e.preventDefault();
-    if(password == confirmPassword){
+    if(password === confirmPassword){
       createUserWithEmailAndPassword(auth, email, password)
       .then(() => {
         history('/signin');
@@ -49,7 +49,7 @@ function Register() {
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
         />
-        <button onClick={Register}>Register</button>
+        <button className="login_button" onClick={Register}>Register</button>
         {error && <div className="error">{error}</div>}
         <Link to="/signin" className="link">Already have an account? Login here.</Link>
       </form>

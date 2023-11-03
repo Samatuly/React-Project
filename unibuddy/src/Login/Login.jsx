@@ -43,9 +43,9 @@ const SignIn = (props) => {
           onChange={(e) => setPassword(e.target.value)}
           />
 
-          <button onClick={login}>Login</button>
+          <button className="login_button" onClick={login}>Login</button>
           {error && <div className="error">{error}</div>}
-          <Link to="/register" className="link">Don't have an account? Register here.</Link>
+          <Link to="/register" className="link_login">Don't have an account? Register here.</Link>
         </form>      
     </div>
   );
