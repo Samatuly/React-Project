@@ -1,25 +1,49 @@
-import React, {useState} from "react";
-import items from './data'
+import React, { useState, useEffect } from "react";
+import { collection, getDocs, query, where } from 'firebase/firestore'; // Import query and where functions
+import { db, firestore } from "../../Firebase/Firebase";
 import Categories from "./Categories";
 import Food from "./Food";
 import './menu.css'
 
-const allCategories = ["all", ...new Set(items.map((item) => item.category))];
-function Menu(){
-    const [menuItems, setMenuItems] = useState(items);
+const allCategories = ["all"];
+
+function Menu() {
+    const [menuItems, setMenuItems] = useState([]);
     const [activeCategory, setActiveCategory] = useState("");
     const [categories, setCategories] = useState(allCategories);
 
+    const fetchMenuFromFirestore = async (category) => {
+        const menuCollection = collection(db, 'menu'); // Replace 'menu' with your Firestore collection name
+
+        if (category === "all") {
+            const querySnapshot = await getDocs(menuCollection);
+            const menuData = [];
+            querySnapshot.forEach((doc) => {
+                menuData.push({ id: doc.id, ...doc.data() });
+            });
+            setMenuItems(menuData);
+        } else {
+            const q = query(menuCollection, where('category', '==', category));
+            const querySnapshot = await getDocs(q);
+            const menuData = [];
+            querySnapshot.forEach((doc) => {
+                menuData.push({ id: doc.id, ...doc.data() });
+            });
+            setMenuItems(menuData);
+        }
+    };
+
+    useEffect(() => {
+        setCategories(allCategories); // You may fetch categories here if needed
+        fetchMenuFromFirestore("all"); // Fetch all menu items initially
+    }, [db]);
+
     const filterItems = (category) => {
         setActiveCategory(category);
-        if (category === "all") {
-            setMenuItems(items);
-            return;
-        }
-        const newItems = items.filter((item) => item.category === category);
-        setMenuItems(newItems);
+        fetchMenuFromFirestore(category);
     };
-    return(
+
+    return (
         <main>
             <section className="menu section">
                 <div className="title">
@@ -36,7 +60,7 @@ function Menu(){
                 </div>
             </section>
         </main>
-    )
+    );
 }
 
 export default Menu;
