@@ -1,3 +1,10 @@
+.faculty-professors {
+    display: flex;
+    margin-top: 20px;
+    width: 75%;
+    margin-left: 25%;
+}
+
 .faculty{
     display: flex;
     margin-top: 20px;

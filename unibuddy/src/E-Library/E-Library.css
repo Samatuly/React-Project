@@ -1,16 +1,22 @@
 .library {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px;
+    margin-top: 20px;
     display: flex;
-    width: 75%;
-    margin-left: 25%;
+    width: 77%;
+    margin-left: 23%;
   }
+
+.library-search {
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 65px;
+}
   
   .book {
-    width: calc(20%); /* 6 books per row with spacing */
-    margin: 5px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: calc(20%);
     padding: 10px;
     border: 1px solid #ccc;
     text-align: center;

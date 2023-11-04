@@ -30,14 +30,6 @@ function Canteen() {
                 <p className="menu-price">250 тг</p>
               </div>
             </div>
-            <div>
-              <ZoomOutMap />
-              <hr />
-              <img
-                className="canteen-image-2"
-                src="https://marketplace.canva.com/EAFN8syLrEw/1/0/900w/canva-gray-and-brown-minimalist-schedule-today-instagram-story-oJoSA9xf8NI.jpg"
-              ></img>
-            </div>
           </div>
         </div>
       </div>

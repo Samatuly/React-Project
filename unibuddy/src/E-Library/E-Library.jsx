@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import './E-Library.css';
 import { collection, getDocs } from 'firebase/firestore';
 import { db, firestore } from "../Firebase/Firebase";
@@ -7,7 +7,8 @@ import BookDetail from "./BookDetail";
 import { books } from "./libraryData";
 
 const E_Library = (props) => {
-  const [books, setBooks] = useState([]);
+  const [booksData, setBooksData] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
     const fetchBooks = async () => {
@@ -17,7 +18,7 @@ const E_Library = (props) => {
         id: doc.id,
         ...doc.data()
       }));
-      setBooks(bookData);
+      setBooksData(bookData);
     };
 
     fetchBooks();
@@ -25,14 +26,32 @@ const E_Library = (props) => {
 
   return (
     <div className="library">
-      {books.map((book) => (
-        <div key={book.id} className="book">
-          <img src={book.image} alt={book.title} />
-          <Link to={`/e_library/${book.id}`}><h2>{book.title}</h2></Link>
-          <p>{book.author}</p>
-          <p>{book.year}</p>
-        </div>
-      ))}
+      <input
+        className="library-search"
+        type="text"
+        placeholder="Search by book title or author"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+      />
+
+      {booksData
+        .filter((book) => {
+          const searchTerms = searchQuery.toLowerCase().split(' ');
+          return searchTerms.every((term) =>
+            book.title.toLowerCase().includes(term) ||
+            book.author.toLowerCase().includes(term)
+          );
+        })
+        .map((book) => (
+          <div key={book.id} className="book">
+            <img src={book.image} alt={book.title} />
+            <Link to={`/e_library/${book.id}`}>
+              <h2>{book.title}</h2>
+            </Link>
+            <p>{book.author}</p>
+            <p>{book.year}</p>
+          </div>
+        ))}
     </div>
   );
 };

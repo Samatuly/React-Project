@@ -1,67 +1,72 @@
-.topbar-container{
+.topbar-container {
     height: 50px;
     width: 100%;
     display: flex;
     position: sticky;
     top: 0;
     align-items: center;
+    justify-content: center;
     border-bottom: 2px solid #494949;
-}
-.topbar-logo{
+    background-color: #ffffff;
+  }
+  .topbar-logo {
     font-size: 24px;
-    margin-left:20px ;
+    margin-left: 20px;
     font-weight: bold;
-    color: white;
-    cursor:pointer;
-}
-.search-bar{
+    /* color: white; */
+    cursor: pointer;
+  }
+  .search-bar {
     width: 100%;
     height: 30px;
-    background-color: white;
-    border-radius:30px ;
-    display: flex;
+    /* background-color: white; */
+    border-radius: 30px;
+    display: inline-flex;
     align-items: center;
-}
-.search-icon{
-    font-size: 20px !important;
-    margin-left: 10px;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+  }
+  .search-icon {
+    /* font-size: 20px !important; */
+    /* margin-left: 10px; */
     background-color: white;
-}
-.search-input{
-    border:none;
-    width: 70%;
-    background-color: white;
-}
-.search-input:focus{
+  }
+  .search-input {
+    border: none;
+    margin-top: 5px;
+    /* width: 70%; */
+    /* background-color: white; */
+  }
+  .search-input:focus {
     outline: none;
-}
-.topbar-left{
+  }
+  .topbar-left {
     flex: 3;
-}
-.topbar-center{
+  }
+  .topbar-center {
     flex: 5;
-}
-.topbar-right{
+  }
+  .topbar-right {
     flex: 4;
     display: flex;
     align-items: center;
     justify-content: space-around;
     color: white;
-}
-.topbar-link{
-    margin-right:10px;
+  }
+  .topbar-link {
+    margin-right: 10px;
     font-size: 14px;
     cursor: pointer;
-}
-.topbar-icons{
+  }
+  .topbar-icons {
     display: flex;
-}
-.topbar-icon-item{
+  }
+  .topbar-icon-item {
     margin-right: 15px;
     position: relative;
-    cursor:pointer;
-}
-.topbar-icon-bage{
+    cursor: pointer;
+  }
+  .topbar-icon-bage {
     width: 15px;
     height: 15px;
     background-color: red;
@@ -74,11 +79,11 @@
     align-items: center;
     justify-content: center;
     font-size: 12px;
-}
-.topbar-img{
+  }
+  .topbar-img {
     width: 40px;
     height: 40px;
     border-radius: 100%;
     object-fit: cover;
     cursor: pointer;
-}
+  }

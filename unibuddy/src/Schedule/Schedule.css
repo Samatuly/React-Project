@@ -1,7 +1,7 @@
-.schedule{
-    display: flex;
-    width: 75%;
-    margin-left: 25%;
+.schedule {
+    display: grid;
+    width: 77%;
+    margin-left: 23%;
 }
 
 .days { 
@@ -27,5 +27,13 @@
     display: grid;
     grid-template-columns: 2fr repeat(6, 3fr);
     border: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
 
+.schedule-cell{
+    align-items: center;
+}
+
+.schedule-item {
+    background-color: #a3c5e4;
 }
