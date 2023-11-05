@@ -44,7 +44,7 @@ const Organisation = () => {
             <h2>{org.name}</h2>
             <p>{org.description}</p>
             <p>Members: {org.numOfMembers}</p>
-            <button>Join</button>
+            <button className="organization-button">Join</button>
           </div>
         ))}
     </div>
