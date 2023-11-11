@@ -16,7 +16,9 @@ const Schedule = (props) => {
     useEffect(() => {
         const fetchSchedule = async () => {
             const user = auth.currentUser;
-            //console.log(user.uid);
+            // if(user.uid != null){
+            //     console.log(user.uid);
+            // }
 
             if (user) {
                 const userUID = user.uid;

@@ -5,7 +5,7 @@
 
 .organization-search {
     margin-left: 5px;
-    width: 80%;
+    width: 90%;
 }
 
 .organization-top {
@@ -16,23 +16,33 @@
 }
 
 .organization-box {
-    width: calc(20%);
+    flex-wrap: inherit;
+    display: flex;
+    width: calc(90%);
     margin: 5px;
     margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ccc;
-    text-align: center;
     background-color: #fff;
 }
 
+.under-box {
+    flex-wrap: wrap;
+    margin-right: 10px;
+}
+
 .organization-logo {
-    width: 50px;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
     border-radius: 10px;
+    margin: 0px 10px 10px 0px;
+    border: 1px solid #c8c8c8;
 }
 
 .organization-button {
     background-color: #0077FF;
-    color: #000000;
+    color: #ffffff;
     margin-top: 10px;
     padding: 10px 20px;
     border: none;
@@ -42,6 +52,11 @@
     transition: background-color 0.3s ease;
     font-weight: 700;
   }
+
+.filter{
+    padding: 5px 10px;
+    margin: 5px 10px 10px 5px;
+}
   
   .organization-button:hover {
     background-color: #0055CC;
@@ -55,4 +70,5 @@
 .organization p {
     font-size: 1rem;
     font-family: 'Times New Roman', Times, serif;
+    margin-top: 10px;
 }

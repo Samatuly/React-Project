@@ -21,7 +21,7 @@ const SignIn = (props) => {
         signInWithEmailAndPassword(auth, email, password)
             .then(() => {
                 props.onSignIn();
-                history('/home'); // Navigate to the home route on successful login
+                history('/home');
             })
             .catch((error) => {
               setError("Invalid email or password. Please try again.");

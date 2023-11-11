@@ -1,149 +1,173 @@
-.faculty-professors {
+.faculty {
     display: flex;
     margin-top: 20px;
     width: 75%;
     margin-left: 25%;
-}
-
-.faculty{
-    display: flex;
-    margin-top: 20px;
-    width: 75%;
-    margin-left: 25%;
-}
-.ratings-image{
+  }
+  .ratings-image {
     width: 300px;
     height: 400px;
     object-fit: cover;
-}
-.ratings-info{
+  }
+  .ratings-info {
     background-color: #657786;
     height: 100px;
     width: 300px;
-    color: white;
+    color: rgb(9, 8, 8);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-.faculty-grid{
+  }
+  .faculty-grid {
     display: grid;
     grid-template-rows: 300px;
-    grid-template-columns: repeat(2,460px);
+    grid-template-columns: repeat(2, 460px);
     gap: 20px;
-}
-.faculty-item{
+  }
+  .faculty-item {
     object-fit: cover;
     color: white;
     border-radius: 8px;
-}
-.link{
+  }
+  .link {
     text-decoration: none;
     color: white;
-}
-.link h4{
+  }
+  .link h4 {
     background-color: transparent;
-}
-.faculty-item h4{
+  }
+  .faculty-item h4 {
     margin-top: 230px;
     font-size: 20px;
     font-weight: bold;
     margin-left: 10px;
-}
-.faculty-item:first-child,.faculty-item:nth-child(2),.faculty-item:nth-child(3),.faculty-item:nth-child(4),.faculty-item:nth-child(5),.faculty-item:last-child{
+    color: white;
+  }
+  .faculty-item:first-child,
+  .faculty-item:nth-child(2),
+  .faculty-item:nth-child(3),
+  .faculty-item:nth-child(4),
+  .faculty-item:nth-child(5),
+  .faculty-item:last-child {
     background-size: cover;
     width: 450px;
     height: 300px;
-    -webkit-box-shadow: 0 0 16px -8px rgba(0,0,0,0.68);
-    box-shadow: 0 0 16px -8px  rgba(0,0,0,0.68);
-}
-.faculty-item:first-child{
-    background-image:url("https://www.sintef.no/contentassets/620a08e5af6c4199ac16d6779dafaff4/shutterstock_131120717.jpg?width=890&height=500&quality=80&mode=crop&scale=both");
-}
-.faculty-item:nth-child(2){
-    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqFU_g2nynRVO5iZ6faDWU94A2jOv3171SYjPbMGmPpiFLaHHHXwSccpPIZrURzgFM91c&usqp=CAU") ;
-}
-.faculty-item:nth-child(3){
+    -webkit-box-shadow: 0 0 16px -8px rgba(0, 0, 0, 0.68);
+    box-shadow: 0 0 16px -8px rgba(0, 0, 0, 0.68);
+  }
+  .faculty-item:first-child {
+    background-image: url("https://www.sintef.no/contentassets/620a08e5af6c4199ac16d6779dafaff4/shutterstock_131120717.jpg?width=890&height=500&quality=80&mode=crop&scale=both");
+  }
+  .faculty-item:nth-child(2) {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqFU_g2nynRVO5iZ6faDWU94A2jOv3171SYjPbMGmPpiFLaHHHXwSccpPIZrURzgFM91c&usqp=CAU");
+  }
+  .faculty-item:nth-child(3) {
     background-image: url("https://cloudinary.hbs.edu/hbsit/image/upload/s--agDeXLCD--/f_auto,c_fill,h_375,w_750,/v20200101/C70DB74F989E0D138FBF05F3252AAE34.jpg");
-}
-.faculty-item:nth-child(4){
+  }
+  .faculty-item:nth-child(4) {
     background-image: url("https://www.marineinsight.com/wp-content/uploads/2019/08/Cruise-ships-1.png");
-}
-.faculty-item:nth-child(5){
-    background-image:url("https://kazguu.kz/wp-content/uploads/2021/12/0004.png");
-}
-.faculty-item:last-child{
+  }
+  .faculty-item:nth-child(5) {
+    background-image: url("https://kazguu.kz/wp-content/uploads/2021/12/0004.png");
+  }
+  .faculty-item:last-child {
     background-image: url("https://www.eng.tohoku.ac.jp/media/images/ugrad/che/main.jpg");
-}
-.faculty-item:first-child:hover{
+  }
+  .faculty-item:first-child:hover {
     transition: 1s;
     scale: 1.1;
-    background-image: linear-gradient(to bottom, transparent, rgba(14, 26, 73, 0.8)),url("https://www.sintef.no/contentassets/620a08e5af6c4199ac16d6779dafaff4/shutterstock_131120717.jpg?width=890&height=500&quality=80&mode=crop&scale=both");
-}
-.faculty-item:nth-child(2):hover{
+    background-image: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(14, 26, 73, 0.8)
+      ),
+      url("https://www.sintef.no/contentassets/620a08e5af6c4199ac16d6779dafaff4/shutterstock_131120717.jpg?width=890&height=500&quality=80&mode=crop&scale=both");
+  }
+  .faculty-item:nth-child(2):hover {
     transition: 1s;
     scale: 1.1;
-    background-image: linear-gradient(to bottom, transparent, rgba(21, 41, 150, 0.71)) ,url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqFU_g2nynRVO5iZ6faDWU94A2jOv3171SYjPbMGmPpiFLaHHHXwSccpPIZrURzgFM91c&usqp=CAU") ;
-}
-.faculty-item:nth-child(3):hover{
+    background-image: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(21, 41, 150, 0.71)
+      ),
+      url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqFU_g2nynRVO5iZ6faDWU94A2jOv3171SYjPbMGmPpiFLaHHHXwSccpPIZrURzgFM91c&usqp=CAU");
+  }
+  .faculty-item:nth-child(3):hover {
     transition: 1s;
     scale: 1.1;
-    background-image: linear-gradient(to bottom, transparent, rgba(79, 38, 34, 0.73)),url("https://cloudinary.hbs.edu/hbsit/image/upload/s--agDeXLCD--/f_auto,c_fill,h_375,w_750,/v20200101/C70DB74F989E0D138FBF05F3252AAE34.jpg");
-}
-.faculty-item:nth-child(4):hover{
+    background-image: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(79, 38, 34, 0.73)
+      ),
+      url("https://cloudinary.hbs.edu/hbsit/image/upload/s--agDeXLCD--/f_auto,c_fill,h_375,w_750,/v20200101/C70DB74F989E0D138FBF05F3252AAE34.jpg");
+  }
+  .faculty-item:nth-child(4):hover {
     transition: 1s;
     scale: 1.1;
-    background-image: linear-gradient(to bottom, transparent, rgb(19, 79, 133)), url("https://www.marineinsight.com/wp-content/uploads/2019/08/Cruise-ships-1.png");
-}
-.faculty-item:nth-child(5):hover{
+    background-image: linear-gradient(to bottom, transparent, rgb(19, 79, 133)),
+      url("https://www.marineinsight.com/wp-content/uploads/2019/08/Cruise-ships-1.png");
+  }
+  .faculty-item:nth-child(5):hover {
     transition: 1s;
     scale: 1.1;
-    background-image: linear-gradient(to bottom, transparent, rgba(101, 25, 58, 0.4)),url("https://kazguu.kz/wp-content/uploads/2021/12/0004.png");
-}
-.faculty-item:last-child:hover{
+    background-image: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(101, 25, 58, 0.4)
+      ),
+      url("https://kazguu.kz/wp-content/uploads/2021/12/0004.png");
+  }
+  .faculty-item:last-child:hover {
     transition: 1s;
     scale: 1.1;
-    background-image:linear-gradient(to bottom, transparent, rgba(30, 95, 154, 0.6)), url("https://www.eng.tohoku.ac.jp/media/images/ugrad/che/main.jpg");
-}
-.ratings{
+    background-image: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(30, 95, 154, 0.6)
+      ),
+      url("https://www.eng.tohoku.ac.jp/media/images/ugrad/che/main.jpg");
+  }
+  .ratings {
     padding: 0;
     display: flex;
     width: 75%;
     margin-left: 25%;
-}
-.professors{
+  }
+  .professors {
     display: flex;
     flex-direction: row;
     margin-top: 20px;
-}
-.faculty-image{
+  }
+  .faculty-image {
     width: 140px;
     height: 250px;
     border-radius: 3px;
     object-fit: cover;
-}
-.faculty-info{
+  }
+  .faculty-info {
     display: flex;
     flex-direction: column;
     margin-left: 10px;
-}
-.faculty-info h2{
-    color: White;
-}
-.faculty-info h4{
+  }
+  .faculty-info h2 {
+    color: black;
+  }
+  .faculty-info h4 {
     margin-top: 10px;
     color: #135489;
-}
-.faculty-info p{
-    color: white;
-
-}
-.faculty-stars{
-    margin-top:30px;
-}
-input[type=radio]{
+  }
+  .faculty-info p {
+    color: black;
+  }
+  .faculty-stars {
+    margin-top: 30px;
+  }
+  input[type="radio"] {
     display: none;
-}
-.stars{
-    cursor:pointer;
-}
+  }
+  .stars {
+    cursor: pointer;
+  }

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Search, SearchIcon } from "@mui/icons-material";
 import { collection, getDocs } from 'firebase/firestore';
 import { db, firestore } from "../Firebase/Firebase";
 import './Organisation.css';
@@ -26,13 +27,20 @@ const Organisation = () => {
       <div className="organization-top">
         Organizations
       </div>
-      <input
-        className="organization-search"
-        type="text"
-        placeholder="Search by organization name"
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-      />
+      <div>
+        <input
+          className="organization-search"
+          type="text"
+          placeholder="Search by organization name"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+      </div>
+      <div>
+        <button className="organization-button filter">All</button>
+        <button className="organization-button filter">Joined</button>
+        <button className="organization-button filter">My organization</button>
+      </div>
       {organisations
         .filter((org) => {
           const searchTerms = searchQuery.toLowerCase().split(' ');
@@ -41,9 +49,11 @@ const Organisation = () => {
         .map((org) => (
           <div className="organization-box" key={org.id}>
             <img className="organization-logo" src={org.logo} alt={org.name} />
-            <h2>{org.name}</h2>
-            <p>{org.description}</p>
-            <p>Members: {org.numOfMembers}</p>
+            <div className="under-box">
+              <h2>{org.name}</h2>
+              <p>{org.description}</p>
+              <p>Members: {org.numOfMembers}</p>
+            </div>
             <button className="organization-button">Join</button>
           </div>
         ))}
