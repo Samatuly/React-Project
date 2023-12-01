@@ -18,7 +18,7 @@ function News() {
           <div className="news-top">
             <h1>HomePage</h1>
           </div>
-          <div className="news-new-post">
+          {/* <div className="news-new-post">
             <Person />
             <input placeholder="What's in your mind? " className="news-input" />
           </div>
@@ -40,7 +40,7 @@ function News() {
                 <Telegram className="news-icon" />
               </button>
             </div>
-          </div>
+          </div> */}
           {/* <hr className="news-hr" />
           <div className="news-bottom">
             <div className="news-options">

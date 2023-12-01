@@ -1,59 +1,60 @@
 .Menu {
-    text-align: center;
+  text-align: center;
 }
 .Menu-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
 }
-.menu-item{
-    margin: 20px;
-    display: flex;
+.menu-item {
+  margin: 20px;
+  display: flex;
 }
-.menu-photo{
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+.menu-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
 }
-.title{
-    text-align: center;
+.title {
+  text-align: center;
 }
-.menu-title{
-    margin-top: 10px;
+.menu-title {
+  margin-top: 10px;
 }
-.categories-container{
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+.categories-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
 }
-.categories-container button{
-    background-color: #135489;
-    border-radius: 8px;
-    padding: 10px;
-    color: white;
-    border: none;
-    margin:5px;
+.categories-container button {
+  background-color: #8eb2cf;
+  border-radius: 8px;
+  padding: 10px;
+  border: none;
+  margin: 5px;
 }
-.foods{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.foods {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.menu-item-info{
-    margin-left: 15px;
+.menu-item-info {
+  margin-left: 15px;
 }
 .item {
-    padding: 1rem 2rem;
+  padding: 1rem 2rem;
 }
 .menu-item h4 {
-    margin-bottom: 10px;
-    font-size: 15px;
+  margin-bottom: 10px;
+  font-size: 15px;
 }
-.menu-price{
+.menu-price {
+}
+.menu-section {
+  color: black;
 }

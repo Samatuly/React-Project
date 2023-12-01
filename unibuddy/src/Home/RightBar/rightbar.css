@@ -1,67 +1,72 @@
-.rightBar-container{
-    flex: 3.5;
-    width: 100%;
-    border-left: 2px solid #494949;
-    color: white;
+.rightBar-container {
+  flex: 3.5;
+  width: 100%;
+  border-left: 2px solid #494949;
+  color: black;
 }
-.rightBar-top,.rightBar-bottom{
-    border-radius: 10px;
+.rightBar-top,
+.rightBar-bottom {
+  border-radius: 10px;
 }
-.organizations-list{
-    list-style: none;
+.organizations-list {
+  list-style: none;
 }
-.organizations-text{
-    font-size: 20px;
+.organizations-text {
+  font-size: 20px;
 }
-.organization-container{
-    padding: 10px;
-    border-bottom: 2px solid #494949;
+.organization-container {
+  padding: 10px;
+  border-bottom: 2px solid #494949;
 }
-.organization-top{
-    margin-bottom: 10px;
-    padding: 5px;
-    font-weight: bold;
-    font-size: 15px;
+.organization-top {
+  margin-bottom: 10px;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 15px;
 }
-.organizations-button{
-    color: #135489;
-    border: none;
-    font-weight: bold;
-    padding: 5px;
-    background-color: transparent;
+.organizations-button {
+  color: #135489;
+  border: none;
+  font-weight: bold;
+  padding: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 50px;
+  margin-top: 10px;
 }
-.organizations-list li{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 5px;
-    margin-top: 10px;
+.organizations-list li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px;
+  margin-top: 10px;
 }
-.organizations-img{
-    width: 30px;
-    border-radius: 100%;
-    margin-right: 15px;
+.organizations-img {
+  width: 30px;
+  border-radius: 100%;
+  margin-right: 15px;
 }
-.rightBar-wrapper{
-    padding: 20px 20px 0 0;
+.rightBar-wrapper {
+  padding: 20px 20px 0 0;
 }
-.schedule-container{
-    padding: 10px;
+.schedule-container {
+  padding: 10px;
 }
-.schedule-top{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
+.schedule-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
 }
-.schedule-text{
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
+.schedule-text {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
-.schedule-image{
-    width: 400px;
-    height: 350px;
-    object-fit: cover;
-    margin-right: 10px;
+.schedule-image {
+  width: 400px;
+  height: 350px;
+  object-fit: cover;
+  margin-right: 10px;
 }

@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { Search, SearchIcon } from "@mui/icons-material";
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs } from "firebase/firestore";
 import { db, firestore } from "../Firebase/Firebase";
-import './Organisation.css';
+import "./Organisation.css";
 
 const Organisation = () => {
   const [organisations, setOrganisations] = useState([]);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     const fetchOrganisations = async () => {
-      const organisationCollection = collection(firestore, 'organisations');
+      const organisationCollection = collection(firestore, "organisations");
       const organisationSnapshot = await getDocs(organisationCollection);
-      const organisationData = organisationSnapshot.docs.map(doc => ({
+      const organisationData = organisationSnapshot.docs.map((doc) => ({
         id: doc.id,
-        ...doc.data()
+        ...doc.data(),
       }));
       setOrganisations(organisationData);
     };
@@ -24,9 +24,7 @@ const Organisation = () => {
 
   return (
     <div className="organization">
-      <div className="organization-top">
-        Organizations
-      </div>
+      <div className="organization-top">Organizations</div>
       <div>
         <input
           className="organization-search"
@@ -43,8 +41,10 @@ const Organisation = () => {
       </div>
       {organisations
         .filter((org) => {
-          const searchTerms = searchQuery.toLowerCase().split(' ');
-          return searchTerms.every((term) => org.name.toLowerCase().includes(term));
+          const searchTerms = searchQuery.toLowerCase().split(" ");
+          return searchTerms.every((term) =>
+            org.name.toLowerCase().includes(term)
+          );
         })
         .map((org) => (
           <div className="organization-box" key={org.id}>
