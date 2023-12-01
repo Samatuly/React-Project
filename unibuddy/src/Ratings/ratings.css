@@ -44,6 +44,7 @@
   font-weight: bold;
   margin-left: 10px;
   color: white;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
 }
 .link:first-child,
 .link:nth-child(2),
