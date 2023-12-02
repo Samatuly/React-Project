@@ -1,12 +1,52 @@
 import "./topbar.css";
-import React from "react";
+import React, { useState, useEffect } from "react";
+import "firebase/auth";
+import "firebase/firestore";
 import { Chat, Notifications, Person, Search } from "@mui/icons-material";
+import { collection, getDocs, where, query } from 'firebase/firestore';
+import { db, firestore, auth } from "../Firebase/Firebase";
+import { Link, useNavigate } from "react-router-dom";
 
 function Topbar() {
+  const [users, setUsers] = useState([]);
+  const [tooltipOpen, setTooltipOpen] = useState(false);
+
+  useEffect(() => {
+    const fetchImage = async () => {
+      const user = auth.currentUser;
+
+      if (user) {
+        const userUID = user.uid;
+        const imageCollection = collection(firestore, 'users');
+        const imageQuery = query(imageCollection, where("userUID", "==", userUID));
+        const imageSnapshot = await getDocs(imageQuery);
+        const imageData = imageSnapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data()
+        }));
+        setUsers(imageData);
+      }
+    };
+
+    fetchImage();
+  }, []);
+
+  const handleTooltipOpen = () => {
+    setTooltipOpen(true);
+  };
+
+  const handleTooltipClose = () => {
+    setTooltipOpen(false);
+  };
+
   return (
     <div className="topbar-container">
       <div className="topbar-left">
-        <span className="topbar-logo">UniBuddy</span>
+        <span className="topbar-logo">
+          <Link to="/home" className="topbar-logo">
+            <a>UniBuddy</a>
+          </Link>
+        </span>
       </div>
       <div className="topbar-center">
         <div className="search-bar">
@@ -31,10 +71,20 @@ function Topbar() {
             <span className="topbar-icon-bage">1</span>
           </div>
         </div>
-        <img
-          src="https://i.pinimg.com/736x/2d/1c/1d/2d1c1d5bd5930c5f886b9a5e6ab299a4.jpg"
-          className="topbar-img"
-        ></img>
+        {users.map((user) => {
+          if (user.image != null) {
+            return (
+              <div key={user.id} className="topbar-img">
+                <img src={user.image} alt="User" className="topbar-img" />
+                <div className="tooltip">
+                  <p>Full name: {user.name} {user.surname}</p>
+                  <p>Phone: {user.phone}</p>
+                </div>
+              </div>
+            );
+          }
+          return null;
+        })}
       </div>
     </div>
   );

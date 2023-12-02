@@ -13,7 +13,8 @@
   font-size: 24px;
   margin-left: 20px;
   font-weight: bold;
-  /* color: white; */
+  text-decoration: none;
+  color: black;
   cursor: pointer;
 }
 .search-bar {
@@ -83,5 +84,23 @@
   height: 40px;
   border-radius: 100%;
   object-fit: cover;
+  position: relative;
   cursor: pointer;
+}
+
+.tooltip {
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.topbar-img:hover .tooltip {
+  display: block;
 }
