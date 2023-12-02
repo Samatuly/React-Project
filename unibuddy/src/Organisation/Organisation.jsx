@@ -17,7 +17,7 @@ import { AuthDetails } from "../Login/AuthDetails";
 const Organisation = () => {
   const [organisations, setOrganisations] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
-  // const [selectedOrganisation, setSelectedOrganisation] = useState("");
+  const [activeButton, setActiveButton] = useState("all");
   const { authUser, userSignOut } = useAuthDetails();
   useEffect(() => {
     const fetchOrganisations = async () => {
@@ -59,6 +59,16 @@ const Organisation = () => {
           const userDocRef = doc(userCollection, userDoc.id);
           await updateDoc(userDocRef, { organisations: updatedOrganisations });
 
+          //now update members counter
+          const docRef = doc(firestore, "organisations", orgId);
+          const docSnap = await getDoc(docRef);
+          if (!docSnap.empty) {
+            await updateDoc(docRef, {
+              numOfMembers: docSnap.data().numOfMembers + 1,
+              members: [...docSnap.data().members, authUser.uid],
+            });
+          }
+
           console.log("User's organisations updated successfully.");
         }
       } else {
@@ -67,6 +77,17 @@ const Organisation = () => {
     } catch (error) {
       console.error("Error updating document:", error.message);
     }
+  };
+  const filterOrganizations = () => {
+    if (activeButton === "all") {
+      return organisations;
+    } else if (activeButton === "joined") {
+      // Assuming you have a user ID, and organizations have a "members" field
+      return organisations.filter((org) => org.members.includes(authUser.uid));
+    }
+  };
+  const handleButtonClick = (buttonType) => {
+    setActiveButton(buttonType);
   };
   return (
     <div className="organization">
@@ -81,11 +102,20 @@ const Organisation = () => {
         />
       </div>
       <div>
-        <button className="organization-button filter">All</button>
-        <button className="organization-button filter">Joined</button>
-        <button className="organization-button filter">My organization</button>
+        <button
+          className="organization-button filter"
+          onClick={() => handleButtonClick("all")}
+        >
+          All
+        </button>
+        <button
+          className="organization-button filter"
+          onClick={() => handleButtonClick("joined")}
+        >
+          Joined
+        </button>
       </div>
-      {organisations
+      {filterOrganizations()
         .filter((org) => {
           const searchTerms = searchQuery.toLowerCase().split(" ");
           return searchTerms.every((term) =>
