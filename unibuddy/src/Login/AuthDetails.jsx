@@ -1,7 +1,7 @@
 import React from "react";
 import { useAuthDetails } from "./useAuthDetailsHook";
 
-const AuthDetails = () => {
+export const AuthDetails = () => {
   const { authUser, userSignOut } = useAuthDetails();
 
   return (
@@ -17,5 +17,3 @@ const AuthDetails = () => {
     </div>
   );
 };
-
-export default AuthDetails;
