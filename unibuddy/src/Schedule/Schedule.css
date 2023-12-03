@@ -35,3 +35,8 @@
 .schedule-cell {
     border-left: 1px solid #ccc;
 }
+
+.schedule-loading {
+    width: 75%;
+    margin-left: 25%;
+}

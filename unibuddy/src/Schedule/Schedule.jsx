@@ -1,7 +1,8 @@
 import React, {useState, useEffect } from "react";
 import './Schedule.css';
 import { collection, getDocs, where, query } from 'firebase/firestore';
-import { db, firestore, auth } from "../Firebase/Firebase";
+import {firestore, auth } from "../Firebase/Firebase";
+import {Navigate } from "react-router-dom";
 
 const hours = [];
 for (let i = 8; i <= 22; i++) {
@@ -12,29 +13,55 @@ const Days = ['', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Satur
 
 const Schedule = (props) => {
     const [schedule, setSchedule] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [authenticated, setAuthenticated] = useState(false);
 
     useEffect(() => {
-        const fetchSchedule = async () => {
-            const user = auth.currentUser;
-            // if(user.uid != null){
-            //     console.log(user.uid);
-            // }
-
+        const checkAuthStatus = () => {
+          const unsubscribe = auth.onAuthStateChanged((user) => {
             if (user) {
-                const userUID = user.uid;
-                const scheduleCollection = collection(firestore, 'schedule', user.uid, user.uid);
-                const scheduleQuery = query(scheduleCollection, where("userUID", "==", userUID));
-                const scheduleSnapshot = await getDocs(scheduleQuery);
-                const scheduleData = scheduleSnapshot.docs.map(doc => ({
-                    id: doc.id,
-                    ...doc.data()
-                }));
-                setSchedule(scheduleData);
+              setAuthenticated(true);
+              fetchSchedule(user);
+            } else {
+              setAuthenticated(false);
+              setLoading(false);
             }
+          });
+    
+          return () => unsubscribe();
         };
-
-        fetchSchedule();
+    
+        checkAuthStatus();
     }, []);
+
+    const fetchSchedule = async (user) => {
+        const userUID = user.uid;
+        const scheduleCollection = collection(firestore, 'users', user.uid, user.uid);
+        const scheduleQuery = query(scheduleCollection, where("userUID", "==", userUID));
+        try {
+          const scheduleSnapshot = await getDocs(scheduleQuery);
+    
+          if (scheduleSnapshot.docs.length > 0) {
+            const scheduleData = scheduleSnapshot.docs.map(doc => ({
+              id: doc.id,
+              ...doc.data()
+            }));
+            setSchedule(scheduleData);
+          }
+        } catch (error) {
+          console.error("Error fetching user data:", error);
+        } finally {
+          setLoading(false);
+        }
+      };
+
+    if (loading) {
+        return <div className="schedule-loading">Loading schedule...</div>;
+    }
+
+    if (!authenticated) {
+        return <Navigate to="/login" />;
+    }
 
     return (
         <div className="schedule">
@@ -58,7 +85,6 @@ const Schedule = (props) => {
                                             {entry.subject} {entry.type}
                                         </div>
                                     );
-
                                 }
                                 return null;
                             })}
@@ -71,7 +97,9 @@ const Schedule = (props) => {
                                             {entry.subject} {entry.type}
                                         </div>
                                     );
-
+                                }
+                                else{
+                                    console.log("doesn't work");
                                 }
                                 return null;
                             })}
@@ -97,7 +125,6 @@ const Schedule = (props) => {
                                             {entry.subject} {entry.type}
                                         </div>
                                     );
-
                                 }
                                 return null;
                             })}
