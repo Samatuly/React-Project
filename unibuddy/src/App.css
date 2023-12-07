@@ -7,3 +7,11 @@
   width: 100vw;
   height: 100vh;
 }
+/* .app-wrapper {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: 0.5fr 5fr;
+}
+.app-topbar {
+  grid-column: span 2;
+} */

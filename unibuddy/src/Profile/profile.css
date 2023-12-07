@@ -1,9 +1,34 @@
-.imgMan{
-    border-radius: 100%;
-    width: 25%;
+/* .imgMan {
+  border-radius: 100%;
+  width: 25%;
 }
-.ProfileInfo label{
-    font-size: 35px;
-    display: flex;
-    flex-direction: row;
+.ProfileInfo label {
+  font-size: 35px;
+  display: flex;
+  flex-direction: row;
+} */
+.profile-user-image {
+  width: 150px;
+  border-radius: 50%;
+}
+.profile-wrapper {
+  margin-top: 20px;
+  width: 75%;
+  margin-left: 25%;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+}
+.profile-grid-wrapper {
+  width: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+.profile-user-faculty {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

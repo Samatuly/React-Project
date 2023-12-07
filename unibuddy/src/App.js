@@ -39,8 +39,8 @@ import Home from "./Home/Home";
 import Canteen from "./Canteen/Canteen";
 import Ratings from "./Ratings/Ratings";
 import Topbar from "./Topbar/Topbar";
-import Faculty from "./Ratings/Faculty.jsx"
-import Professores from "./Ratings/Professors.js"
+import Faculty from "./Ratings/Faculty.jsx";
+import Professores from "./Ratings/Professors.js";
 import "./App.css";
 
 const App = () => {
@@ -55,7 +55,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
-        <Topbar />
+        <Topbar className="app-topbar" />
         {isSignedIn ? <Sidebar /> : <Sidebar_before />}
         <Routes>
           <Route path="/home" element={<Home />} />
@@ -67,8 +67,14 @@ const App = () => {
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/e_library" element={<E_Library />} />
           <Route path="/e_library/:bookId" element={<BookDetail />} />
-          <Route path="/signin" element={<SignIn onSignIn={() => setIsSignedIn(true)} />}/>
-          <Route path="/signout" element={<SignOut onSignOut={() => setIsSignedIn(false)} />}/>
+          <Route
+            path="/signin"
+            element={<SignIn onSignIn={() => setIsSignedIn(true)} />}
+          />
+          <Route
+            path="/signout"
+            element={<SignOut onSignOut={() => setIsSignedIn(false)} />}
+          />
           <Route path="/register" element={<Register />} />
         </Routes>
       </div>
