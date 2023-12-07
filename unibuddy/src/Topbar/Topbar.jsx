@@ -107,9 +107,9 @@ function Topbar() {
   //   );
   // }
 
-  if (!authenticated) {
-    return <Navigate to="/signin" />;
-  }
+  // if (!authenticated) {
+  //   return <Navigate to="/signin" />;
+  // }
 
   return (
     <div className="topbar-container">

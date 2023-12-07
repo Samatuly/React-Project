@@ -41,6 +41,7 @@ import Ratings from "./Ratings/Ratings";
 import Topbar from "./Topbar/Topbar";
 import Faculty from "./Ratings/Faculty.jsx";
 import Professores from "./Ratings/Professors.js";
+import Map from "../src/Map/Map.jsx";
 import "./App.css";
 
 const App = () => {
@@ -67,6 +68,7 @@ const App = () => {
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/e_library" element={<E_Library />} />
           <Route path="/e_library/:bookId" element={<BookDetail />} />
+          <Route path="/map" element={<Map />} />
           <Route
             path="/signin"
             element={<SignIn onSignIn={() => setIsSignedIn(true)} />}
