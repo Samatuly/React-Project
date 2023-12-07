@@ -16,7 +16,7 @@ const Map = () => {
   };
   useEffect(() => {
     // Auto-advance to the next slide every 2000 milliseconds (2 seconds)
-    const intervalId = setInterval(nextSlide, 2000);
+    const intervalId = setInterval(nextSlide, 5000);
 
     // Clean up the interval on component unmount
     return () => clearInterval(intervalId);
