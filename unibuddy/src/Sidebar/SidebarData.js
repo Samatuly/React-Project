@@ -10,7 +10,7 @@ import {
   StarPurple500,
   Output,
 } from "@mui/icons-material";
-
+import MapIcon from "@mui/icons-material/Map";
 import { Menu } from "@mui/material";
 
 export const SidebarData = [
@@ -50,9 +50,9 @@ export const SidebarData = [
     link: "/ratings",
   },
   {
-    title: "Settings",
-    icon: <Settings />,
-    link: "/settings",
+    title: "Map",
+    icon: <MapIcon />,
+    link: "/map",
   },
   {
     title: "Sign Out",
