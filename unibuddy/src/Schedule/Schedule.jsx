@@ -59,10 +59,6 @@ const Schedule = (props) => {
         return <div className="schedule-loading">Loading schedule...</div>;
     }
 
-    if (!authenticated) {
-        return <Navigate to="/login" />;
-    }
-
     return (
         <div className="schedule">
             <div className="days">
