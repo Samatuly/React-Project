@@ -135,16 +135,16 @@ function Topbar() {
           <div className="topbar-icon-item">
             <Link to="/profile">
               <Person></Person>
-              <span className="topbar-icon-bage">1</span>{" "}
+              {/* <span className="topbar-icon-bage">1</span>{" "} */}
             </Link>
           </div>
           <div className="topbar-icon-item">
             <Chat></Chat>
-            <span className="topbar-icon-bage">2</span>
+            {/* <span className="topbar-icon-bage">2</span> */}
           </div>
           <div className="topbar-icon-item">
             <Notifications></Notifications>
-            <span className="topbar-icon-bage">1</span>
+            {/* <span className="topbar-icon-bage">1</span> */}
           </div>
         </div>
         {users.map((user) => {
