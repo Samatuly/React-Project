@@ -5,6 +5,7 @@ import RightBar from "./RightBar/RightBar";
 import Sidebar from "../Sidebar/Sidebar";
 
 function Home({ searchTerm }){
+
     return(
         <>
             <div className="home-container">

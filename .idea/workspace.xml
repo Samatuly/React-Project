@@ -61,6 +61,11 @@
       <change afterPath="$PROJECT_DIR$/../project/src/app/top-bar/top-bar.component.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../project/src/app/top-bar/top-bar.component.spec.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../project/src/app/top-bar/top-bar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Home/Share/Share.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home/Share/Share.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Home/Share/share.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home/Share/share.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Home/Slider/Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home/Slider/Slider.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +82,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
@@ -153,7 +163,8 @@
       <workItem from="1699692425928" duration="220000" />
       <workItem from="1702030496221" duration="1496000" />
       <workItem from="1702671286720" duration="4672000" />
-      <workItem from="1702724353466" duration="2556000" />
+      <workItem from="1702724353466" duration="2909000" />
+      <workItem from="1702745883282" duration="4861000" />
     </task>
     <servers />
   </component>
