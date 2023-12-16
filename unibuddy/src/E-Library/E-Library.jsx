@@ -12,15 +12,29 @@ const E_Library = (props) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeFilterButton, setActiveFilterButton] = useState("all");
   const { authUser, userSignOut } = useAuthDetails();
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchBooks = async () => {
-      const bookCollection = collection(firestore, "books");
-      const booksSnapshot = await getDocs(bookCollection);
-      const bookData = booksSnapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-      setBooksData(bookData);
+      //creating new worker
+      const worker = new Worker(
+        new URL("./bookFetch.worker.js", import.meta.url)
+      );
+
+      //Listen for messages in worker
+      worker.onmessage = (event) => {
+        const { success, data, error } = event.data;
+        if (success) {
+          console.log(data);
+          setBooksData(data);
+          setLoading(false);
+        } else {
+          console.error("Error fetching data:", error);
+          setLoading(false);
+        }
+        worker.terminate();
+      };
+      // Send data to the worker
+      worker.postMessage({ collection: "books" });
     };
 
     fetchBooks();
@@ -30,7 +44,7 @@ const E_Library = (props) => {
       return booksData;
     } else if (activeFilterButton === "favorite") {
       // Assuming you have a user ID, and organizations have a "members" field
-      return booksData.filter((book) => book.whoTook.includes(authUser.uid));
+      return booksData?.filter((book) => book.whoTook.includes(authUser.uid));
     }
   };
   const handleButtonClick = (buttonType) => {
@@ -59,27 +73,33 @@ const E_Library = (props) => {
           Favourites
         </button>
       </div>
-      <div className="library-list">
-        {filterBooks()
-          .filter((book) => {
-            const searchTerms = searchQuery.toLowerCase().split(" ");
-            return searchTerms.every(
-              (term) =>
-                book.title.toLowerCase().includes(term) ||
-                book.author.toLowerCase().includes(term)
-            );
-          })
-          .map((book) => (
-            <div key={book.id} className="book">
-              <Link to={`/e_library/${book.id}`}>
-                <img src={book.image} alt={book.title} />
-                <h2>{book.title}</h2>
-              </Link>
-              <p>{book.author}</p>
-              <p>{book.year}</p>
-            </div>
-          ))}
-      </div>
+      {loading ? (
+        <h1 style={{ display: "flex", justifyContent: "center" }}>
+          Loading...
+        </h1>
+      ) : (
+        <div className="library-list">
+          {filterBooks()
+            ?.filter((book) => {
+              const searchTerms = searchQuery.toLowerCase().split(" ");
+              return searchTerms.every(
+                (term) =>
+                  book.title.toLowerCase().includes(term) ||
+                  book.author.toLowerCase().includes(term)
+              );
+            })
+            ?.map((book) => (
+              <div key={book.id} className="book">
+                <Link to={`/e_library/${book.id}`}>
+                  <img src={book.image} alt={book.title} />
+                  <h2>{book.title}</h2>
+                </Link>
+                <p>{book.author}</p>
+                <p>{book.year}</p>
+              </div>
+            ))}
+        </div>
+      )}
     </div>
   );
 };
