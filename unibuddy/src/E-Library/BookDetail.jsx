@@ -46,8 +46,9 @@ const BookDetail = () => {
       const userCollection = collection(firestore, "users");
       const userQuery = query(
         userCollection,
-        where("userId", "==", authUser.uid)
+        where("userUID", "==", authUser.uid)
       );
+      console.log(authUser.uid);
       const userQuerySnapshot = await getDocs(userQuery);
       if (!userQuerySnapshot.empty) {
         const userDoc = userQuerySnapshot.docs[0];

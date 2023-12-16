@@ -49,7 +49,7 @@ const Organisation = () => {
       const userCollection = collection(firestore, "users");
       const userQuery = query(
         userCollection,
-        where("userId", "==", authUser.uid)
+        where("userUID", "==", authUser.uid)
       );
       const userQuerySnapshot = await getDocs(userQuery);
       if (!userQuerySnapshot.empty) {
