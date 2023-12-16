@@ -61,7 +61,6 @@ function RightBar() {
               <span className="schedule-text">Schedule for today!</span>
               <Link to="/schedule">
                 <ZoomOutMap></ZoomOutMap>
-                <span className="topbar-icon-bage">1</span>{" "}
               </Link>
             </div>
             <hr />

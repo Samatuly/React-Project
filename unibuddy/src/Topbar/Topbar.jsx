@@ -155,7 +155,7 @@ function Topbar() {
                   <img src={user.image} alt="User" className="topbar-img" />
                 </Link>
                 <div className="tooltip">
-                  <p> Full name: {user.name} {user.surname} </p>
+                  Full name: {user.name} {user.surname}
                 </div>
               </div>
             );
