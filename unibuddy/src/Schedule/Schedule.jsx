@@ -2,7 +2,6 @@ import React, {useState, useEffect } from "react";
 import './Schedule.css';
 import { collection, getDocs, where, query } from 'firebase/firestore';
 import {firestore, auth } from "../Firebase/Firebase";
-import {Navigate } from "react-router-dom";
 
 const hours = [];
 for (let i = 8; i <= 22; i++) {
