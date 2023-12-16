@@ -61,46 +61,6 @@
       <change afterPath="$PROJECT_DIR$/../project/src/app/top-bar/top-bar.component.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../project/src/app/top-bar/top-bar.component.spec.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../project/src/app/top-bar/top-bar.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Firebase/Firebase.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Organizations/Organizations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Organizations/organizations.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Profile/Profile.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Schedule/Schedule.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Schedule/Schedule.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Canteen/Canteen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Canteen/Canteen.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Canteen/Menu/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Canteen/Menu/Menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Canteen/Menu/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Canteen/Menu/data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Canteen/Menu/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Canteen/Menu/menu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Canteen/canteen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Canteen/canteen.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Home/Data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home/Share/Data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Home/RightBar/RightBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home/RightBar/RightBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Home/RightBar/rightbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home/RightBar/rightbar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Home/Share/Share.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home/Share/Share.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Home/Share/share.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home/Share/share.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Home/Slider/Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home/Slider/Slider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Home/Slider/slider.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home/Slider/slider.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Home/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Home/news/News.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Home/news/news.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Home/news/sidebarLeft.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Profile/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Profile/profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ratings/Faculty.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ratings/Faculty.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ratings/FacultyData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ratings/FacultyData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ratings/Professors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ratings/Professors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ratings/Ratings.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ratings/Ratings.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ratings/RatingsData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ratings/RatingsData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ratings/ratings.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ratings/ratings.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sidebar/Sidebar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sidebar/sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sidebar/sidebar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Topbar/Topbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Topbar/Topbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Topbar/topbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Topbar/topbar.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +153,7 @@
       <workItem from="1699692425928" duration="220000" />
       <workItem from="1702030496221" duration="1496000" />
       <workItem from="1702671286720" duration="4672000" />
-      <workItem from="1702724353466" duration="2245000" />
+      <workItem from="1702724353466" duration="2556000" />
     </task>
     <servers />
   </component>
