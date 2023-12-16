@@ -13,7 +13,6 @@ const menu = [
         category: 'lunch',
         price: 13.99,
         img: "https://img1.russianfood.com/dycontent/images_upl/8/sm_7600.jpg",
-        desc: `vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats `,
     },
     {
         id: 3,

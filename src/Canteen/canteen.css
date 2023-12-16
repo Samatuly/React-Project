@@ -2,38 +2,46 @@
     display: flex;
     width: 75%;
     margin-left: 25%;
+    color: white;
 }
 .canteen-wrapper{
     display: flex;
     flex-direction: row;
 }
 .canteen-left{
-    flex:4;
-    width: 50%;
+    flex:6;
+    width: 70%;
 }
 .canteen-right{
-    width: 50%;
+    width: 400px;
     height:max-content ;
-    flex: 3;
+    flex: 2;
     padding: 10px;
-    border-radius: 10px;
-    -webkit-box-shadow: 0 0 16px -8px rgba(0,0,0,0.68);
-    box-shadow: 0 0 16px -8px  rgba(0,0,0,0.68);
+    border-left: 2px solid #494949;
     margin: 10px;
 }
 .canteen-top{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 10px;
 }
 .canteen-text{
     font-size: 15px;
     font-weight: bold;
+    text-align: center;
 }
-.canteen-image-2{
-    width: 400px;
-    height: 350px;
-    object-fit: cover;
-    margin-right: 10px;
+.canteen-menu{
+    text-align: center;
+}
+.canteen-menu h4{
+    margin: 10px;
+}
+.canteen-menu h5{
+    margin-bottom:10px;
+}
+.menu-price{
+    font-family: "Noto Sans Old Italic";
+    font-weight: bold;
+    margin: 5px;
 }

@@ -1,13 +1,13 @@
 import React, {useState} from "react";
 import './slider.css'
-import {Favorite, MoreVert, Person, ThumbDown, ThumbUp} from "@mui/icons-material";
-import {Users} from "../Data";
+import {Favorite, MoreVert, Person} from "@mui/icons-material";
+import {Users} from "../Share/Data";
 
 function Slider({post}){
     const [like,setLike] = useState(post.like);
     const [isLiked,setIsLiked] = useState(false);
 
-    const likeHandler =()=>{
+    const likeHandler = () =>{
         setLike(isLiked ? like - 1 : like + 1);
         setIsLiked(!isLiked)
     }
@@ -24,7 +24,7 @@ function Slider({post}){
                             <span className="post-date"> <p>{post.date}</p></span>
                         </div>
                         <div className="post-top-right">
-                            <MoreVert/>
+                            <MoreVert />
                         </div>
                     </div>
                     <div className="post-center">
@@ -36,9 +36,8 @@ function Slider({post}){
                     </div>
                     <div className="post-bottom">
                         <div className="post-bottom-left">
-                            <ThumbUp onClick={likeHandler} htmlColor="#135489"/>
-                            <Favorite className="like-button" onClick={likeHandler} htmlColor="#EB5077"></Favorite>
-                            <span className="post-like-counter">{post.like} people like it</span>
+                            <Favorite className={"like-button " + (isLiked ? "liked" : "")} onClick={likeHandler}></Favorite>
+                            <span className="post-like-counter">{like} people like it</span>
                         </div>
                         <div className="post-bottom-right">
                             <span className="post-comment">{post.comment} comments</span>

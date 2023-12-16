@@ -11,7 +11,7 @@ function Sidebar(){
                                key = {key} onClick={() => {window.location.pathname = val.link}}>
                         <div className="sidebar-icon">{val.icon}</div>
                         {" "}
-                        <div>{val.title}</div>
+                        <div className="sidebar-title">{val.title}</div>
                     </li>;
                 })}
             </ul>
