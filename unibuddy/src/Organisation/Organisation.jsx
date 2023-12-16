@@ -19,15 +19,26 @@ const Organisation = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeButton, setActiveButton] = useState("all");
   const { authUser, userSignOut } = useAuthDetails();
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchOrganisations = async () => {
-      const organisationCollection = collection(firestore, "organisations");
-      const organisationSnapshot = await getDocs(organisationCollection);
-      const organisationData = organisationSnapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-      setOrganisations(organisationData);
+      const worker = new Worker(
+        new URL("./fetchOrganisations.worker.js", import.meta.url)
+      );
+      //Listen for messages in worker
+      worker.onmessage = (event) => {
+        const { success, data, error } = event.data;
+        if (success) {
+          setOrganisations(data);
+          setLoading(false);
+        } else {
+          console.error("Error fetching data:", error);
+          setLoading(false);
+        }
+        worker.terminate();
+      };
+      // Send data to the worker
+      worker.postMessage({ collection: "organisations" });
     };
 
     fetchOrganisations();
@@ -115,29 +126,41 @@ const Organisation = () => {
           Joined
         </button>
       </div>
-      {filterOrganizations()
-        .filter((org) => {
-          const searchTerms = searchQuery.toLowerCase().split(" ");
-          return searchTerms.every((term) =>
-            org.name.toLowerCase().includes(term)
-          );
-        })
-        .map((org) => (
-          <div className="organization-box" key={org.id}>
-            <img className="organization-logo" src={org.logo} alt={org.name} />
-            <div className="under-box">
-              <h2>{org.name}</h2>
-              <p>{org.description}</p>
-              <p>Members: {org.numOfMembers}</p>
-            </div>
-            <button
-              className="organization-button"
-              onClick={() => JoinOrg(org.id, org.name)}
-            >
-              Join
-            </button>
-          </div>
-        ))}
+      {loading ? (
+        <h1 style={{ display: "flex", justifyContent: "center" }}>
+          Loading...
+        </h1>
+      ) : (
+        <div>
+          {filterOrganizations()
+            .filter((org) => {
+              const searchTerms = searchQuery.toLowerCase().split(" ");
+              return searchTerms.every((term) =>
+                org.name.toLowerCase().includes(term)
+              );
+            })
+            .map((org) => (
+              <div className="organization-box" key={org.id}>
+                <img
+                  className="organization-logo"
+                  src={org.logo}
+                  alt={org.name}
+                />
+                <div className="under-box">
+                  <h2>{org.name}</h2>
+                  <p>{org.description}</p>
+                  <p>Members: {org.numOfMembers}</p>
+                </div>
+                <button
+                  className="organization-button"
+                  onClick={() => JoinOrg(org.id, org.name)}
+                >
+                  Join
+                </button>
+              </div>
+            ))}
+        </div>
+      )}
     </div>
   );
 };
