@@ -6,8 +6,12 @@ import { Chat, Notifications, Person, Search } from "@mui/icons-material";
 import { collection, getDocs, where, query } from "firebase/firestore";
 import { db, firestore, auth } from "../Firebase/Firebase";
 import { Link, Navigate } from "react-router-dom";
+import Share from "../Home/Share/Share";
+import {Posts} from "../Home/Share/Data";
 
-function Topbar() {
+function Topbar({onSearch}) {
+  const [searchInput, setSearchInput] = useState("");
+  const [filteredPosts, setFilteredPosts] = useState(Posts);
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [authenticated, setAuthenticated] = useState(false);
@@ -49,6 +53,13 @@ function Topbar() {
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleInputChange = (e) => {
+    e.preventDefault();
+    const searchTerm = e.target.value;
+    setSearchInput(searchTerm);
+    onSearch(searchTerm);
   };
 
   // if (loading) {
@@ -122,8 +133,14 @@ function Topbar() {
       </div>
       <div className="topbar-center">
         <div className="search-bar">
-          <Search className="search-icon" />
-          <input placeholder="Search..." className="search-input" />
+            <Search className="search-icon" />
+            <input
+                placeholder="Search..."
+                className="search-input"
+                type="text"
+                value={searchInput}
+                onChange={handleInputChange}
+            />
         </div>
       </div>
       <div className="topbar-right">
