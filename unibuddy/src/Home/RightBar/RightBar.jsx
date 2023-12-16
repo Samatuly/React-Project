@@ -1,9 +1,27 @@
-/* eslint-disable jsx-a11y/alt-text */
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { collection, getDocs } from "firebase/firestore";
+import { firestore } from "../../Firebase/Firebase";
+import { ZoomOutMap } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 import "./rightbar.css";
-import { ZoomOut, ZoomOutMap } from "@mui/icons-material";
 
 function RightBar() {
+  const [organisations, setOrganisations] = useState([]);
+
+  useEffect(() => {
+    const fetchOrganisations = async () => {
+      const organisationCollection = collection(firestore, "organisations");
+      const organisationSnapshot = await getDocs(organisationCollection);
+      const organisationData = organisationSnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setOrganisations(organisationData);
+    };
+
+    fetchOrganisations();
+  }, []);
+
   return (
     <div className="rightBar-container">
       <div className="rightBar-wrapper">
@@ -14,31 +32,19 @@ function RightBar() {
             </div>
 
             <ul className="organizations-list">
-              <li>
-                {" "}
-                <img
-                  src="https://i.pinimg.com/736x/2d/1c/1d/2d1c1d5bd5930c5f886b9a5e6ab299a4.jpg"
-                  className="organizations-img"
-                ></img>
-                Faces
-              </li>
-              <li>
-                {" "}
-                <img
-                  src="https://i.pinimg.com/736x/2d/1c/1d/2d1c1d5bd5930c5f886b9a5e6ab299a4.jpg"
-                  className="organizations-img"
-                ></img>
-                Faces
-              </li>
-              <li>
-                {" "}
-                <img
-                  src="https://i.pinimg.com/736x/2d/1c/1d/2d1c1d5bd5930c5f886b9a5e6ab299a4.jpg"
-                  className="organizations-img"
-                ></img>
-                Faces
-              </li>
+              {organisations.slice(0, 3).map((org) => {
+                if (org.logo != null) {
+                  return (
+                    <li key={org.id}>
+                      <img className="organizations-img" src={org.logo} alt={org.name} />
+                      {org.name}
+                    </li>
+                  );
+                }
+                return null;
+              })}
             </ul>
+
             <button
               className="organizations-button"
               onClick={() => {
@@ -53,13 +59,18 @@ function RightBar() {
           <div className="schedule-container">
             <div className="schedule-top">
               <span className="schedule-text">Schedule for today!</span>
-              <ZoomOutMap />
+              <Link to="/schedule">
+                <ZoomOutMap></ZoomOutMap>
+                <span className="topbar-icon-bage">1</span>{" "}
+              </Link>
             </div>
             <hr />
-            <img
-              className="schedule-image"
-              src="https://marketplace.canva.com/EAFN8syLrEw/1/0/900w/canva-gray-and-brown-minimalist-schedule-today-instagram-story-oJoSA9xf8NI.jpg"
-            ></img>
+            <Link to="/schedule">
+              <img
+                className="schedule-image"
+                src="https://marketplace.canva.com/EAFN8syLrEw/1/0/900w/canva-gray-and-brown-minimalist-schedule-today-instagram-story-oJoSA9xf8NI.jpg"
+              ></img>
+            </Link>
           </div>
         </div>
       </div>

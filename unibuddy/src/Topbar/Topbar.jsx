@@ -132,12 +132,12 @@ function Topbar() {
         </Link>
         <span className="topbar-link">Timeline</span>
         <div className="topbar-icons">
-          <div className="topbar-icon-item">
+          {/* <div className="topbar-icon-item">
             <Link to="/profile">
               <Person></Person>
-              {/* <span className="topbar-icon-bage">1</span>{" "} */}
+              <span className="topbar-icon-bage">1</span>{" "}
             </Link>
-          </div>
+          </div> */}
           <div className="topbar-icon-item">
             <Chat></Chat>
             {/* <span className="topbar-icon-bage">2</span> */}
@@ -151,12 +151,11 @@ function Topbar() {
           if (user.image != null) {
             return (
               <div key={user.id} className="topbar-img">
-                <img src={user.image} alt="User" className="topbar-img" />
+                <Link to="/profile">
+                  <img src={user.image} alt="User" className="topbar-img" />
+                </Link>
                 <div className="tooltip">
-                  <p>
-                    Full name: {user.name} {user.surname}
-                  </p>
-                  <p>Phone: {user.phone}</p>
+                  <p> Full name: {user.name} {user.surname} </p>
                 </div>
               </div>
             );
