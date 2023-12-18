@@ -1,49 +1,65 @@
-import React, { useState } from "react";
-import "./share.css";
-import Slider from "../Slider/Slider";
-import { Posts } from "./Data";
-import {
-  EmojiEmotions,
-  Label,
-  PermMedia,
-  Room,
-  Telegram,
-} from "@mui/icons-material";
-function Share({ searchTerm }) {
-  const [isFormOpen, setIsFormOpen] = useState(false);
-  const [imageUrl, setImageUrl] = useState("");
+import React, { useState, useEffect } from 'react';
+import './share.css';
+import Slider from '../Slider/Slider';
+import { EmojiEmotions, Label, PermMedia, Room, Telegram } from '@mui/icons-material';
+import { collection, getDocs, addDoc } from 'firebase/firestore';
+import { firestore } from '../../Firebase/Firebase';
 
+function Share() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [imageUrl, setImageUrl] = useState('');
   const [newPost, setNewPost] = useState({
-    id: Posts.length + 1,
     userId: 1,
-    header: "",
-    desc: "",
-    photo: "",
-    date: "",
+    header: '',
+    desc: '',
+    photo: '',
+    date: '',
     like: 0,
     comment: 0,
   });
 
-  const handleAddPost = () => {
-    if (newPost.desc.trim() !== "") {
-      Posts.push({
+  const [news, setNews] = useState([]);
+
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        const newsCollection = collection(firestore, 'news');
+        const newsSnapshot = await getDocs(newsCollection);
+        const newsData = newsSnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setNews(newsData);
+      } catch (error) {
+        console.error('Error fetching news:', error.message);
+      }
+    };
+
+    fetchNews();
+  }, []);
+
+  const handleAddPost = async () => {
+    if (newPost.desc.trim() !== '') {
+      const newsCollection = collection(firestore, 'news');
+      const newNewsItem = {
         ...newPost,
         date: new Date().toLocaleDateString(),
-      });
+      };
+      await addDoc(newsCollection, newNewsItem);
       setNewPost({
-        id: Posts.length + 1,
         userId: 1,
-        header: "",
-        desc: "",
-        photo: "",
-        date: "",
+        header: '',
+        desc: '',
+        photo: '',
+        date: '',
         like: 0,
         comment: 0,
       });
-      setImageUrl("");
+      setImageUrl('');
       setIsFormOpen(false);
     }
   };
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setNewPost((prevPost) => ({
@@ -51,9 +67,10 @@ function Share({ searchTerm }) {
       [name]: value,
     }));
   };
+
   const loadNewImage = () => {
     const newImageUrl =
-      "https://pivkomarket.kz/wp-content/uploads/2020/06/akcija-31-picca.jpg";
+      'https://pivkomarket.kz/wp-content/uploads/2020/06/akcija-31-picca.jpg';
     setImageUrl(newImageUrl);
     setNewPost((prevPost) => ({
       ...prevPost,
@@ -72,17 +89,6 @@ function Share({ searchTerm }) {
     setIsFormOpen(!isFormOpen);
   };
 
-  const filteredPosts = Posts.filter((p) => {
-    const lowerCaseHeader = p.header.toLowerCase();
-    const lowerCaseDesc = p.desc.toLowerCase();
-    const lowerCaseSearchTerm = searchTerm ? searchTerm.toLowerCase() : "";
-
-    return (
-      lowerCaseHeader.includes(lowerCaseSearchTerm) ||
-      lowerCaseDesc.includes(lowerCaseSearchTerm)
-    );
-  });
-
   return (
     <div className="share">
       <div className="share-wrapper">
@@ -98,19 +104,19 @@ function Share({ searchTerm }) {
                 </button>
                 <button
                   className="news-button"
-                  onClick={() => handleContentButtonClick("Label")}
+                  onClick={() => handleContentButtonClick('Label')}
                 >
                   <Label className="news-icon" />
                 </button>
                 <button
                   className="news-button"
-                  onClick={() => handleContentButtonClick("📍")}
+                  onClick={() => handleContentButtonClick('📍')}
                 >
                   <Room className="news-icon" />
                 </button>
                 <button
                   className="news-button"
-                  onClick={() => handleContentButtonClick("😊")}
+                  onClick={() => handleContentButtonClick('😊')}
                 >
                   <EmojiEmotions className="news-icon" />
                 </button>
@@ -120,7 +126,10 @@ function Share({ searchTerm }) {
               </button>
               {isFormOpen && (
                 <div>
-                  <button className="news-button-save" onClick={handleAddPost}>
+                  <button
+                    className="news-button-save"
+                    onClick={handleAddPost}
+                  >
                     Save
                   </button>
                 </div>
@@ -148,11 +157,12 @@ function Share({ searchTerm }) {
             </div>
           </div>
         </div>
-        {filteredPosts.map((p) => (
+        {news.map((p) => (
           <Slider key={p.id} post={p} />
         ))}
       </div>
     </div>
   );
 }
+
 export default Share;
