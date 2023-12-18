@@ -45,6 +45,7 @@ import Map from "../src/Map/Map.jsx";
 import "./App.css";
 
 const App = () => {
+  const [searchTerm, setSearchTerm] = useState("");
   const [isSignedIn, setIsSignedIn] = useState(
     localStorage.getItem("isSignedIn") === "true"
   );
@@ -53,13 +54,17 @@ const App = () => {
     localStorage.setItem("isSignedIn", isSignedIn);
   }, [isSignedIn]);
 
+  const handleSearch = (term) => {
+    setSearchTerm(term);
+  };
+
   return (
     <BrowserRouter>
       <div className="app-wrapper">
-        <Topbar className="app-topbar" />
+        <Topbar className="app-topbar" onSearch={handleSearch} />
         {isSignedIn ? <Sidebar /> : <Sidebar_before />}
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/home" element={<Home searchTerm={searchTerm}/>} />
           <Route path="/canteen" element={<Canteen />} />
           <Route path="/ratings" element={<Faculty />} />
           <Route path="/profile" element={<Profile />} />
