@@ -60,20 +60,29 @@
   cursor:pointer;
   border-bottom: 1px dashed grey;
   font-size: 15px;
+  width: fit-content;
+  margin-bottom: 10px;
 }
-.post-bottom-right{
-
+.post-bottom-right {
+  display: flex;
+  flex-direction: column;
 }
-/*.news h1,p,span{*/
-/*    padding: 10px;*/
-/*}*/
-/*.containerList{*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    margin-left: 27%;*/
-/*    list-style: none;*/
-/*}*/
-/*.containerList li{*/
-/*    margin-bottom: 30px;*/
-/*    border-bottom: 1px solid #E1E8ED;*/
-/*}*/
+.post-bottom-right ul{
+  list-style: none;
+}
+.post-comment button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.post-comment-bottom button, .comment-form button{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: darkblue;
+  font-weight: bold;
+}
+.comment-former{
+  display: flex;
+  justify-content: space-between;
+}
