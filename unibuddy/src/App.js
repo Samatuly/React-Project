@@ -43,6 +43,8 @@ import Faculty from "./Ratings/Faculty.jsx";
 import Professores from "./Ratings/Professors.js";
 import Map from "../src/Map/Map.jsx";
 import "./App.css";
+import EventComponent from "./EventComponent/EventComponent.jsx";
+import MyCalendar from "./Calendar/Calendar.jsx";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -64,7 +66,7 @@ const App = () => {
         <Topbar className="app-topbar" onSearch={handleSearch} />
         {isSignedIn ? <Sidebar /> : <Sidebar_before />}
         <Routes>
-          <Route path="/home" element={<Home searchTerm={searchTerm}/>} />
+          <Route path="/home" element={<Home searchTerm={searchTerm} />} />
           <Route path="/canteen" element={<Canteen />} />
           <Route path="/ratings" element={<Faculty />} />
           <Route path="/profile" element={<Profile />} />
@@ -74,6 +76,7 @@ const App = () => {
           <Route path="/e_library" element={<E_Library />} />
           <Route path="/e_library/:bookId" element={<BookDetail />} />
           <Route path="/map" element={<Map />} />
+          <Route path="/events" element={<MyCalendar />}></Route>
           <Route
             path="/signin"
             element={<SignIn onSignIn={() => setIsSignedIn(true)} />}
