@@ -97,7 +97,7 @@ function Slider({ post, username }) {
                 <Person />
                 <span className="post-user-name">{username}</span>
                 <span className="post-date">
-                  <p>{post.date}</p>
+                  <p>{post.status}</p>
                 </span>
               </div>
               <div className="post-top-right">

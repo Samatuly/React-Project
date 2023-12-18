@@ -3,6 +3,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { firestore } from "../../Firebase/Firebase";
 import { ZoomOutMap } from "@mui/icons-material";
 import { Link } from "react-router-dom";
+import rightbarSchedule from "../RightBar/schedule_rightbar.jpg";
 import "./rightbar.css";
 
 function RightBar() {
@@ -67,7 +68,7 @@ function RightBar() {
             <Link to="/schedule">
               <img
                 className="schedule-image"
-                src="https://marketplace.canva.com/EAFN8syLrEw/1/0/900w/canva-gray-and-brown-minimalist-schedule-today-instagram-story-oJoSA9xf8NI.jpg"
+                src={rightbarSchedule}
               ></img>
             </Link>
           </div>

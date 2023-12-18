@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './share.css';
 import Slider from '../Slider/Slider';
 import { EmojiEmotions, Label, PermMedia, Room, Telegram } from '@mui/icons-material';
-import { collection, getDocs, addDoc } from 'firebase/firestore';
-import { firestore } from '../../Firebase/Firebase';
+import { collection, getDocs, addDoc } from "firebase/firestore";
+import { firestore } from "../../Firebase/Firebase";
 
 function Share() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -70,7 +70,7 @@ function Share() {
 
   const loadNewImage = () => {
     const newImageUrl =
-      'https://pivkomarket.kz/wp-content/uploads/2020/06/akcija-31-picca.jpg';
+      'https://img.freepik.com/free-vector/hand-drawn-student-discount-sale-banner_23-2150639191.jpg';
     setImageUrl(newImageUrl);
     setNewPost((prevPost) => ({
       ...prevPost,
