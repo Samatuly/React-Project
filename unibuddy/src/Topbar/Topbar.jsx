@@ -7,9 +7,9 @@ import { collection, getDocs, where, query } from "firebase/firestore";
 import { db, firestore, auth } from "../Firebase/Firebase";
 import { Link, Navigate } from "react-router-dom";
 import Share from "../Home/Share/Share";
-import {Posts} from "../Home/Share/Data";
+import { Posts } from "../Home/Share/Data";
 
-function Topbar({onSearch}) {
+function Topbar({ onSearch }) {
   const [searchInput, setSearchInput] = useState("");
   const [filteredPosts, setFilteredPosts] = useState(Posts);
   const [users, setUsers] = useState([]);
@@ -133,14 +133,14 @@ function Topbar({onSearch}) {
       </div>
       <div className="topbar-center">
         <div className="search-bar">
-            <Search className="search-icon" />
-            <input
-                placeholder="Search..."
-                className="search-input"
-                type="text"
-                value={searchInput}
-                onChange={handleInputChange}
-            />
+          <Search className="search-icon" />
+          <input
+            placeholder="Search..."
+            className="search-input"
+            type="text"
+            value={searchInput}
+            onChange={handleInputChange}
+          />
         </div>
       </div>
       <div className="topbar-right">
