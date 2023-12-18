@@ -13,7 +13,7 @@ import { auth, firestore } from "../Firebase/Firebase";
 import "./Organisation.css";
 import { useAuthDetails } from "../Login/useAuthDetailsHook";
 import { AuthDetails } from "../Login/AuthDetails";
-
+import { useMemo } from "react";
 const Organisation = () => {
   const [organisations, setOrganisations] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
@@ -40,7 +40,6 @@ const Organisation = () => {
       // Send data to the worker
       worker.postMessage({ collection: "organisations" });
     };
-
     fetchOrganisations();
   }, []);
   const JoinOrg = async (orgId, orgName) => {
