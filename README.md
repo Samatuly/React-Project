@@ -16,6 +16,7 @@ Unibuddy is more than just an app; it's a multifaceted solution crafted to empow
 <h1>Features</h1>
 <h3>Schedule</h3>
 Unibuddy's Schedule feature is a powerful tool designed to empower students in effectively organizing and optimizing their academic commitments. This sophisticated scheduling system goes beyond basic planning, offering a dynamic and user-friendly interface to ensure students can seamlessly manage their class schedules, assignments, and important deadlines.<br>
+![Home page](https://github.com/Samatuly/React-Project/blob/main/Screenshots%20of%20final%20project/Home_page.PNG)
 <h3>Organizations</h3>
 The Organization's feature serves as a comprehensive hub, offering a detailed directory of diverse student groups on campus. Users can explore detailed profiles, search efficiently, and filter based on interests, streamlining the discovery process. With features for tracking membership and participation, Unibuddy promotes a sense of community and involvement. Seamlessly joining and engaging with student organizations is made easy, providing a gateway to a vibrant campus life experience.<br>
 <h3>E-Library</h3>
